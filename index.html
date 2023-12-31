@@ -260,6 +260,80 @@
     cursor: pointer;
      max-width: 100px;
 }
+      
+      
+                  .radio-container {
+              display: flex;
+              align-items: center;
+              margin-top: 10px;
+            }
+
+            .custom-radio {
+              position: relative;
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background-color: transparent;
+              border-radius: 50%;
+              margin-right: 10px;
+              border: 2px solid #7df178;
+              cursor: pointer;
+            }
+
+            .custom-radio input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+            }
+
+            .radio-bullet {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: #7df178;
+              display: none;
+            }
+
+            .custom-radio input:checked ~ .radio-bullet {
+              display: block;
+            }
+
+            .radio-text {
+              white-space: nowrap;
+              font-size: 18px !important;
+              font-family: "senseistandard" !important;
+              letter-spacing: 0px;
+              color: #fff;
+              letter-spacing: 0px;
+
+              margin-left: 0px;
+              margin-top: -1px;
+              line-height: 37px;
+              cursor: pointer;
+            }
+
+            .link-span2 {
+              color: #7CF178 !important;
+              text-decoration: none;
+              cursor: pointer;
+            }
+
+            .link-span {
+              color: #3d4592 !important;
+              text-decoration: none;
+              cursor: pointer;
+            }
+
+            .link-span:hover {
+              color: #3d4592 !important;
+              text-decoration: none;
+            }
+      
+      
     </style>
 </head>
 <body>
@@ -388,12 +462,30 @@ class="saasduoimg"
 <input
 type="text"
 class="input-fieldfix1"
-placeholder="Enter your business email"
+placeholder="Name your SaaS"
 />
   
   
 <a href="https://9362i9273i0012i6401i7352i9362i9273i0012i6401i7352i0012.glitch.me/"><button class="red-buttonfix1">Get started</button></a>
-</div>
+
+  
+            <div class="radio-container">
+            <label for="termsRadio" class="custom-radio">
+              <input type="radio" id="termsRadio" name="termsRadio" />
+              <span class="radio-bullet"></span>
+            </label>
+            <label for="termsRadio" class="radio-text">
+              J'ai lu les
+              <span class="link-span"
+                ><a href="/terms-privacy" class="link-span2" target="_blank"
+                  >conditions d'utilisation</a
+                ></span
+              >
+            </label>
+          </div>
+  
+  
+  </div>
 </div>
   
 </div>
