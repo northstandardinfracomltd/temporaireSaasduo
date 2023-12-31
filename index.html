@@ -223,13 +223,91 @@
         .dropdown-list-item:hover {
             background-color: lightgrey;
         }
+      
+              .dropdown2 {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropdown2-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown2-item {
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown2-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .dropdown2-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+      
+   .navlogo {
+    margin-top: 8.5px;
+    margin-left: 0px !important;
+    cursor: pointer;
+     max-width: 100px;
+}
     </style>
 </head>
 <body>
 
     <div class="parent-div">
         <div class="div-1">
-            <p>Texte dummy de la div 1 aligné à droite.</p>
+         <img class="navlogo" src="https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Logo.svg?v=1693315892152" alt="">
+          
+          
+          
+<div class="dropdown2" onclick="toggleDropdown()">
+    <div class="dropdown2-icon">&#8942;</div>
+    <div class="dropdown2-content" id="myDropdown">
+        <a href="#" class="dropdown2-item">Login</a>
+        <a href="#" class="dropdown2-item">Contact</a>
+        <a href="#" class="dropdown2-item">Follow us</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('click', function (event) {
+        var dropdown = document.getElementById('myDropdown');
+        var icon = document.querySelector('.dropdown2-icon');
+
+        if (!event.target.matches('.dropdown2-icon')) {
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+                icon.style.color = '#000'; // Change the icon color when dropdown is closed
+            }
+        }
+    });
+
+    function toggleDropdown() {
+        var dropdown = document.getElementById('myDropdown');
+        var icon = document.querySelector('.dropdown2-icon');
+
+        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+            dropdown.style.display = 'block';
+            icon.style.color = '#00cc00'; // Change the icon color when dropdown is open
+        } else {
+            dropdown.style.display = 'none';
+            icon.style.color = '#000'; // Change the icon color when dropdown is closed
+        }
+    }
+</script>
+          
+          
+          
         </div>
 
 <div class="div-2">
