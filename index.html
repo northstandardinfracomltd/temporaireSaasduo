@@ -178,6 +178,50 @@
   box-shadow: 0 0 0px 4px #008eff38;
 }
 
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid blue;
+            border-radius: 12px;
+            outline: none;
+        }
+
+        .dropdown-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            border: 1px solid blue;
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            background-color: grey;
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-list-item {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-list-item img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .dropdown-list-item:hover {
+            background-color: lightgrey;
+        }
       
     </style>
 </head>
@@ -203,6 +247,53 @@ class="saasduoimg"
   
   
 <div class="col-right">
+  
+  
+<div class="dropdown-container">
+    <input type="text" class="dropdown-input" id="dropdownInput" readonly placeholder="Select color">
+    <ul class="dropdown-list" id="colorList">
+        <li class="dropdown-list-item" data-value="Blue">
+            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Blue"> Blue
+        </li>
+        <li class="dropdown-list-item" data-value="Green">
+            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Green"> Green
+        </li>
+        <li class="dropdown-list-item" data-value="Yellow">
+            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Yellow"> Yellow
+        </li>
+        <li class="dropdown-list-item" data-value="Brown">
+            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Brown"> Brown
+        </li>
+    </ul>
+</div>
+
+<script>
+    const dropdownInput = document.getElementById('dropdownInput');
+    const colorList = document.getElementById('colorList');
+
+    dropdownInput.addEventListener('focus', function () {
+        colorList.style.display = 'block';
+        dropdownInput.style.borderRadius = '12px 12px 0 0';
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown-input') && !event.target.closest('.dropdown-container')) {
+            colorList.style.display = 'none';
+            dropdownInput.style.borderRadius = '12px';
+        }
+    });
+
+    colorList.addEventListener('click', function (event) {
+        if (event.target.matches('.dropdown-list-item')) {
+            const selectedValue = event.target.getAttribute('data-value');
+            dropdownInput.value = selectedValue;
+            colorList.style.display = 'none';
+            dropdownInput.style.borderRadius = '12px';
+        }
+    });
+</script>
+  
+  
 <div class="form-container1">
 <p class="saasduotext3">Commencez maintenant à créer votre logiciel</p>
 <input
@@ -210,6 +301,8 @@ type="text"
 class="input-fieldfix1"
 placeholder="Enter your business email"
 />
+  
+  
 <a href="https://9362i9273i0012i6401i7352i9362i9273i0012i6401i7352i0012.glitch.me/"><button class="red-buttonfix1">Get started</button></a>
 </div>
 </div>
