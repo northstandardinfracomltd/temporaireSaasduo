@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid blue;
+            border-radius: 12px;
+            outline: none;
+        }
+
+        .dropdown-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            border: 1px solid blue;
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            background-color: grey;
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-list-item {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-list-item img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .dropdown-list-item:hover {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dropdown-container" id="dropdownContainer">
+    <input type="text" class="dropdown-input" id="dropdownInput" placeholder="Select or type a color">
+    <ul class="dropdown-list" id="colorList">
+        <li class="dropdown-list-item" data-value="Blue">
+            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Blue"> Blue
+        </li>
+        <li class="dropdown-list-item" data-value="Green">
+            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Green"> Green
+        </li>
+        <li class="dropdown-list-item" data-value="Yellow">
+            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Yellow"> Yellow
+        </li>
+        <li class="dropdown-list-item" data-value="Brown">
+            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Brown"> Brown
+        </li>
+    </ul>
+</div>
+
+<script>
+    const dropdownInput = document.getElementById('dropdownInput');
+    const colorList = document.getElementById('colorList');
+    const dropdownContainer = document.getElementById('dropdownContainer');
+
+    function openDropdown() {
+        colorList.style.display = 'block';
+        dropdownInput.style.borderRadius = '12px 12px 0 0';
+    }
+
+    function closeDropdown() {
+        colorList.style.display = 'none';
+        dropdownInput.style.borderRadius = '12px';
+    }
+
+    dropdownInput.addEventListener('focus', openDropdown);
+    dropdownInput.addEventListener('input', closeDropdown);
+
+    document.addEventListener('click', function (event) {
+        if (!event.target.matches('.dropdown-input') && !event.target.closest('.dropdown-container')) {
+            closeDropdown();
+        }
+    });
+
+    colorList.addEventListener('click', function (event) {
+        if (event.target.matches('.dropdown-list-item')) {
+            const selectedValue = event.target.getAttribute('data-value');
+            dropdownInput.value = selectedValue;
+            closeDropdown();
+        }
+    });
+
+    dropdownContainer.addEventListener('mouseenter', openDropdown);
+    dropdownContainer.addEventListener('mouseleave', closeDropdown);
+</script>
+
+</body>
+</html>

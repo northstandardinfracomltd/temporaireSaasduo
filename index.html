@@ -178,6 +178,7 @@
   box-shadow: 0 0 0px 4px #008eff38;
 }
 
+
         .dropdown-container {
             position: relative;
             display: inline-block;
@@ -222,7 +223,6 @@
         .dropdown-list-item:hover {
             background-color: lightgrey;
         }
-      
     </style>
 </head>
 <body>
@@ -247,9 +247,10 @@ class="saasduoimg"
   
   
 <div class="col-right">
-  
+  <p class="saasduotext3">Commencez maintenant à créer votre logiciel</p>
 
-<div class="dropdown-container">
+
+<div class="dropdown-container" id="dropdownContainer">
     <input type="text" class="dropdown-input" id="dropdownInput" placeholder="Select or type a color">
     <ul class="dropdown-list" id="colorList">
         <li class="dropdown-list-item" data-value="Blue">
@@ -270,6 +271,7 @@ class="saasduoimg"
 <script>
     const dropdownInput = document.getElementById('dropdownInput');
     const colorList = document.getElementById('colorList');
+    const dropdownContainer = document.getElementById('dropdownContainer');
 
     function openDropdown() {
         colorList.style.display = 'block';
@@ -298,14 +300,13 @@ class="saasduoimg"
         }
     });
 
-    dropdownInput.addEventListener('mouseover', openDropdown);
-    dropdownInput.addEventListener('mouseout', closeDropdown);
+    dropdownContainer.addEventListener('mouseenter', openDropdown);
+    dropdownContainer.addEventListener('mouseleave', closeDropdown);
 </script>
 
   
   
 <div class="form-container1">
-<p class="saasduotext3">Commencez maintenant à créer votre logiciel</p>
 <input
 type="text"
 class="input-fieldfix1"
