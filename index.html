@@ -248,9 +248,9 @@ class="saasduoimg"
   
 <div class="col-right">
   
-  
+
 <div class="dropdown-container">
-    <input type="text" class="dropdown-input" id="dropdownInput" readonly placeholder="Select color">
+    <input type="text" class="dropdown-input" id="dropdownInput" placeholder="Select or type a color">
     <ul class="dropdown-list" id="colorList">
         <li class="dropdown-list-item" data-value="Blue">
             <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Blue"> Blue
@@ -271,15 +271,22 @@ class="saasduoimg"
     const dropdownInput = document.getElementById('dropdownInput');
     const colorList = document.getElementById('colorList');
 
-    dropdownInput.addEventListener('focus', function () {
+    function openDropdown() {
         colorList.style.display = 'block';
         dropdownInput.style.borderRadius = '12px 12px 0 0';
-    });
+    }
+
+    function closeDropdown() {
+        colorList.style.display = 'none';
+        dropdownInput.style.borderRadius = '12px';
+    }
+
+    dropdownInput.addEventListener('focus', openDropdown);
+    dropdownInput.addEventListener('input', closeDropdown);
 
     document.addEventListener('click', function (event) {
         if (!event.target.matches('.dropdown-input') && !event.target.closest('.dropdown-container')) {
-            colorList.style.display = 'none';
-            dropdownInput.style.borderRadius = '12px';
+            closeDropdown();
         }
     });
 
@@ -287,11 +294,14 @@ class="saasduoimg"
         if (event.target.matches('.dropdown-list-item')) {
             const selectedValue = event.target.getAttribute('data-value');
             dropdownInput.value = selectedValue;
-            colorList.style.display = 'none';
-            dropdownInput.style.borderRadius = '12px';
+            closeDropdown();
         }
     });
+
+    dropdownInput.addEventListener('mouseover', openDropdown);
+    dropdownInput.addEventListener('mouseout', closeDropdown);
 </script>
+
   
   
 <div class="form-container1">
