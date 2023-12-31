@@ -438,6 +438,40 @@
      
       
       
+            
+      
+                        .yellowdivtxt1 {
+  font-size: 54px !important;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 40px;
+  cursor: default;
+}
+      
+                        .yellowdivtxt2 {
+  font-size: 22px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 40px;
+  cursor: default;
+}
+      
       
     .grid-container2 {
       display: grid;
@@ -458,6 +492,48 @@
     }
       
       
+      
+          .yellowdiv {
+      background-color: yellow;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .yellowdiv p {
+      margin-bottom: 10px;
+    }
+
+    .yellowdiv img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .yellowdiv a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      background-color: blue;
+      border-radius: 5px;
+    }
+      
+      
+      
+      
+.clovismetrics {
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  display: block;
+}
       
     </style>
 </head>
@@ -720,6 +796,99 @@ placeholder="Name your SaaS"
 
   
   
+  
+    <div class="yellowdiv">
+    <p class="yellowdivtxt1">Un texte paragraphe</p>
+    <img src="chemin/vers/votre/image.jpg" alt="Description de l'image">
+    <p class="yellowdivtxt2">Un autre texte paragraphe</p>
+    <a href="http://www.example.com" class="button">Cliquez ici</a>
+  </div>
+  
+  
+  
+    
+<div class="centered-div">
+<p class="saasduoT1">Mon name</p>
+<p class="saasduoT2">Ceci est un texte dummy paragraphe</p>
+<img src="https://via.placeholder.com/300" alt="Image Placeholder">
+<br>
+<a href="https://example.com" class="custom-button">Mon Bouton</a>
+</div>
+  
+  
+  
+  
+  
+  
+  
+      
+        <div class="clovismetrics">
+                            <div class="faq-accordion2">
+
+          
+                    
+<button class="justriding34">
+If you don't speak English</button>
+                              
+                                      <div class="faq-accordion">
+
+        <div class="faq-item">
+            <div class="faq-question">Utilisateur francophone</div>
+            <div class="faq-answer">
+                <p>SaaSduo est un éditeur et distributeur de solutions digitales, systèmes et logiciels, infrastructures cloud, et plateformes pour le grand public ; offrant une synergie pratique, intuitive, familière et conviviale entre le physique et le numérique pour les entreprises de toutes industries et dimensions — Un produit personnalisé et centralisé répondant à vos critères, idées et demandes ; ainsi que conforme aux standards européens</p>
+              <a href="/contact"> <button class="red-price-buttonBX">Contacter SaaSduo</button></a>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Germanischer Benutzer</div>
+            <div class="faq-answer">
+                <p>SaaSduo ist ein Herausgeber und Vertreiber von digitalen Lösungen, Systemen und Software, Cloud-Infrastrukturen und Plattformen für die breite Öffentlichkeit ; Es bietet eine praktische, intuitive, vertraute und benutzerfreundliche Synergie zwischen physischen und digitalen Elementen für Unternehmen aller Branchen und Größen — Ein personalisiertes und zentralisiertes Produkt, das Ihren Kriterien, Ideen und Anforderungen entspricht und den europäischen Standards entspricht</p>
+                         <a href="/contact"> <button class="red-price-buttonBX">Kontakt SaaSduo</button></a>
+
+        </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Utilizador lusófono</div>
+            <div class="faq-answer">
+                <p>SaaSduo é um editor e distribuidor de soluções digitais, sistemas e software, infraestruturas de nuvem e plataformas para o público em geral ; oferecendo uma sinergia prática, intuitiva, familiar e amigável entre o físico e o digital para empresas de todas as indústrias e dimensões — Um produto personalizado e centralizado que atende aos seus critérios, ideias e solicitações; e que está em conformidade com os padrões europeus.</p>
+                          <a href="/contact"> <button class="red-price-buttonBX">Contactar SaaSduo</button></a>
+</div>
+        </div>
+    </div>   </div>
+          <br>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const allAnswers = document.querySelectorAll('.faq-answer');
+                const allQuestions = document.querySelectorAll('.faq-question');
+
+                allAnswers.forEach(a => {
+                    a.style.display = 'none';
+                });
+
+                allQuestions.forEach(q => {
+                    q.style.color = '#ccc';
+                  
+                });
+
+                answer.style.display = 'block';
+                question.style.color = '#000';
+            });
+        });
+    </script>
+          
+          
+
+      
+
+      <br><br>
+      
+      
+    </div> 
 
 </body>
 </html>
