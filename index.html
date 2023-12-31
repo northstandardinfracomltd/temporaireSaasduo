@@ -8,15 +8,48 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
+      
+      
+      
 
         .parent-div {
-            background-color: #ccc;
+              background: radial-gradient(
+      farthest-side at bottom left,
+      #7edd92,
+      transparent 500px
+    ),
+    radial-gradient(farthest-side at center, #fff, transparent),
+    radial-gradient(
+      farthest-side at top right,
+      #6ec500,
+      #cdff3f,
+      transparent 900px
+    ),
+    radial-gradient(
+      farthest-side at bottom right,
+      #eefdd1,
+      #2aac67,
+      transparent 900px
+    );
             padding: 20px;
         }
+      
+      
+      
+        @media (min-width: 100px) and (max-width: 819px) {
+
+.parent-div {
+background: linear-gradient(142deg, #ffffff, #f9fdff, #ebfeff, #ddffff, #d9fff0, #cef8dd, #c9f1c8, #c9e8b0, #aad99a, #88ca86, #61bb75, #2aac67) !important;
+
+}}
+
+      
+      
+      
 
         .div-1 {
             text-align: right;
-          background: red;
+          background: transparent;
         }
 
         .div-2 {
@@ -24,7 +57,10 @@
             grid-template-columns: 1fr 1fr;
             grid-gap: 20px;
             margin-top: 20px;
-          background: yellow;
+          background: transparent;
+          max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
         }
 
         .col-left {
@@ -182,6 +218,7 @@
         .dropdown-container {
             position: relative;
             display: inline-block;
+          width: 100%;
         }
 
         .dropdown-input {
@@ -190,6 +227,7 @@
             border: 1px solid blue;
             border-radius: 12px;
             outline: none;
+          width: 100%;
         }
 
         .dropdown-list {
@@ -205,6 +243,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
+          z-index: 999;
         }
 
         .dropdown-list-item {
@@ -212,6 +251,7 @@
             cursor: pointer;
             display: flex;
             align-items: center;
+          z-index: 1000;
         }
 
         .dropdown-list-item img {
@@ -1173,7 +1213,6 @@ placeholder="Name your SaaS"
 />
   
   
-<a href="https://9362i9273i0012i6401i7352i9362i9273i0012i6401i7352i0012.glitch.me/"><button class="red-buttonfix1">Get started</button></a>
 
   
             <div class="radio-container">
@@ -1191,7 +1230,8 @@ placeholder="Name your SaaS"
             </label>
           </div>
   
-  
+  <a href="https://9362i9273i0012i6401i7352i9362i9273i0012i6401i7352i0012.glitch.me/"><button class="red-buttonfix1">Get started</button></a>
+
   </div>
 </div>
   
