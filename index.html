@@ -1,72 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
+        .parent-div {
+            background-color: #ccc;
+            padding: 20px;
+        }
 
-    <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-    <title>Hello World!</title>
+        .div-1 {
+            text-align: right;
+          background: red;
+        }
 
-    <!-- The website stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+        .div-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            margin-top: 20px;
+          background: yellow;
+        }
 
-    <!-- The website JavaScript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <h1 class="title">Hello World!</h1>
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <div class="instructions">
-          <h2>Using this project</h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out the code in the editor and open
-            the <span class="fileopener" data-file="TODO.md" data-line="0"
-              >TODO</span> for next steps!
-          </p>
-          <!--  🚧 TODO: ADD BUTTON HERE -->
+        .col-left {
+            text-align: left;
+        }
 
-          <!-- Once you've added the button from TODO.md, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
+        .col-right {
+            text-align: right;
+        }
+      
+      @font-face {
+  font-family: saasduoTIL;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Secondary?v=1692806478312")
+    format("opentype");
+}
+
+@font-face {
+  font-family: saasduoPAR;
+  font-weight: bold;
+  src: url("https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20more?v=1692822723823")
+    format("opentype");
+}
+      
+.saasduotext1 {
+  font-size: 81px !important;
+  font-family: "saasduoTIL" !important;
+  letter-spacing: -3px;
+  padding-left: 0px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 70px;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  cursor: default;
+}
+      
+      .saasduotext2 {
+  font-size: 24px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+  color: #1b1b20;
+  letter-spacing: 0px;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 40px;
+  cursor: default;
+}
+      
+      .saasduoimg {
+  width: 90%;
+  margin-top: -2px;
+  margin-bottom: 10px;
+  padding-right: 0px;
+  padding-left: 0px;
+  text-align: center !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+      
+      
+    </style>
+</head>
+<body>
+
+    <div class="parent-div">
+        <div class="div-1">
+            <p>Texte dummy de la div 1 aligné à droite.</p>
         </div>
-      </div>
-    </div>
-    <!-- The footer holds our remix button — you can keep or delete it ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
-    </footer>
-  </body>
+
+<div class="div-2">
+  
+<div class="col-left">
+  
+<p class="saasduotext1">For your SaaS</p>
+<p class="saasduotext2">Stop using inappropriate software or expensive developers — Your affordable and on-demand SaaS is here, pay as you go after an upfront fee — We craft personalized end-to-end experiences and systems ; to centralize external or internal features and activities</p>
+<img
+src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/Capture%20d%E2%80%99e%CC%81cran%202023-12-31%20a%CC%80%2015.14.07.png?v=1704032097171"
+class="saasduoimg"
+/>
+  </div>
+  
+  
+  
+<div class="col-right">
+<p>Texte dummy colonne droite aligné à droite.</p>
+</div>
+  
+</div>
+</div>
+
+</body>
 </html>
