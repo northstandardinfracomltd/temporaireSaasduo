@@ -220,7 +220,7 @@ background: linear-gradient(142deg, #ffffff, #f9fdff, #ebfeff, #ddffff, #d9fff0,
         .dropdown-container {
             position: relative;
             display: inline-block;
-          width: 320px;
+          width: 100%;
         }
 
         .dropdown-input {
@@ -229,10 +229,16 @@ background: linear-gradient(142deg, #ffffff, #f9fdff, #ebfeff, #ddffff, #d9fff0,
             border: 1px solid blue;
             border-radius: 12px;
             outline: none;
-          width: 300px;
+          max-width: 400px !important;
+    width: 100% !important;
+              margin-left: auto;
+    margin-right: auto;
+    text-align: center;
         }
 
         .dropdown-list {
+                    max-width: 400px !important;
+    width: 100% !important;
             position: absolute;
             top: 100%;
             left: 0;
@@ -1144,9 +1150,7 @@ background-color: #06f;
   white-space: nowrap;
   margin-bottom: 10px;
   cursor: default;
-      -webkit-text-fill-color: transparent !important;
-    background: -webkit-linear-gradient(#de663b, #ff6c37, #ff713d) !important;
-    -webkit-background-clip: text !important;
+      color: #06f !important;
     }
       
       
@@ -1205,7 +1209,7 @@ background-color: #06f;
 <div class="col-left">
   
 <!-- Le paragraphe initial -->
-<p class="saasduotext1" onmouseover="showDropdown()" onmouseout="hideDropdown()" onclick="toggleDropdown()">Reliable SaaS
+<p class="saasduotext1" onmouseover="showDropdown()" onmouseout="hideDropdown()" onclick="toggleDropdown()">Your SaaS
  <br> <span class="saas-subtitle">What SaaS mean?</span>
 </p>
 
@@ -1244,6 +1248,12 @@ class="saasduoimg"
   <p class="saasduotext3">Commencez maintenant à créer votre logiciel</p>
 
 
+  
+  
+<div class="form-container1">
+  
+  
+  
 <div class="dropdown-container" id="dropdownContainer">
     <input type="text" class="dropdown-input" id="dropdownInput" placeholder="Select or type a color">
     <ul class="dropdown-list" id="colorList">
@@ -1297,10 +1307,8 @@ class="saasduoimg"
     dropdownContainer.addEventListener('mouseenter', openDropdown);
     dropdownContainer.addEventListener('mouseleave', closeDropdown);
 </script>
-
   
   
-<div class="form-container1">
 <input
 type="text"
 class="input-fieldfix1"
