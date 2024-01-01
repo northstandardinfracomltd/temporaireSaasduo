@@ -94,8 +94,10 @@ background: linear-gradient(142deg, #ffffff, #f9fdff, #ebfeff, #ddffff, #d9fff0,
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  line-height: 70px;
+      line-height: 30px;
+    padding-top: 15px;
   margin-top: 5px;
+  white-space: nowrap;
   margin-bottom: 10px;
   cursor: default;
   -webkit-text-fill-color: transparent;
@@ -1108,6 +1110,46 @@ background-color: #06f;
 }
       
       
+          .saas-dropdown {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      padding: 12px;
+      z-index: 1;
+    }
+
+    /* Style pour le lien de la définition */
+    .saas-dropdown a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    /* Style pour le texte "What SaaS mean?" */
+    .saas-subtitle {      
+        font-size: 10px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+  padding-left: 0px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-top: -35px !important;
+      line-height: 0px !important;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  cursor: default;
+      -webkit-text-fill-color: transparent !important;
+    background: -webkit-linear-gradient(#de663b, #ff6c37, #ff713d) !important;
+    -webkit-background-clip: text !important;
+    }
+      
+      
     </style>
 </head>
 <body>
@@ -1162,7 +1204,33 @@ background-color: #06f;
   
 <div class="col-left">
   
-<p class="saasduotext1">For your SaaS</p>
+<!-- Le paragraphe initial -->
+<p class="saasduotext1" onmouseover="showDropdown()" onmouseout="hideDropdown()" onclick="toggleDropdown()">Reliable SaaS
+ <br> <span class="saas-subtitle">What SaaS mean?</span>
+</p>
+
+<!-- Le dropdown avec la définition de SaaS -->
+<div class="saas-dropdown" id="saasDropdown">
+  <a href="#">Loren I-sum definition of SaaS</a>
+</div>
+
+<script>
+  // Fonction pour afficher le dropdown
+  function showDropdown() {
+    document.getElementById("saasDropdown").style.display = "block";
+  }
+
+  // Fonction pour cacher le dropdown
+  function hideDropdown() {
+    document.getElementById("saasDropdown").style.display = "none";
+  }
+
+  // Fonction pour basculer l'affichage du dropdown
+  function toggleDropdown() {
+    var dropdown = document.getElementById("saasDropdown");
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+  }
+</script>
 <p class="saasduotext2">Stop using inappropriate software or expensive developers — Your affordable and on-demand SaaS is here, pay as you go after an upfront fee — We craft personalized end-to-end experiences and systems ; to centralize external or internal features and activities for SMBs and industry leaders.</p>
 <img
 src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/0938293999282922292992922II3II33I3II30393.svg?v=1704069829990"
