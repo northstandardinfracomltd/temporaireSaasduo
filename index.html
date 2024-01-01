@@ -125,16 +125,18 @@ background: linear-gradient(142deg, #ffffff, #f9fdff, #ebfeff, #ddffff, #d9fff0,
   font-size: 24px !important;
   font-family: "saasduoPAR" !important;
   letter-spacing: 0px;
-  color: #1b1b20;
-  letter-spacing: 0px;
-  padding-left: 0px;
+  padding-left: 10px;
   padding-bottom: 10px;
   padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
-  text-align: right;
+  text-align: center;
   line-height: 40px;
   cursor: default;
+              
+                  -webkit-text-fill-color: transparent !important;
+    background: -webkit-linear-gradient(#de663b, #ff6c37, #ff713d) !important;
+    -webkit-background-clip: text !important;
 }
       
       .saasduoimg {
@@ -159,36 +161,22 @@ background: linear-gradient(142deg, #ffffff, #f9fdff, #ebfeff, #ddffff, #d9fff0,
 }
       
       .input-fieldfix1 {
-  height: 54px;
-  margin-top: 20px;
-  border: 3px solid #ffd000;
-  border-radius: 9px;
-  margin-right: 10px;
-  font-family: "saasduoPAR";
-  font-size: 19px;
-  text-align: center;
-  color: #5d5c69 !important;
-          width: 100%;
-
+    margin-top: 20px;
+        margin-bottom: 10px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    font-family: "saasduoPAR";
+    font-size: 19px;
+    text-align: center;
+    color: #5d5c69 !important;
+    width: 100%;
+    padding: 0px !important;
 }
 
 .input-fieldfix1:hover {
   box-shadow: 0 0 0px 4px #008eff38;
 }
-.input-fieldfix1:focus {
-  outline: none !important;
-  flex: 3;
-  height: 54px;
-  border: 3px solid #ffd000;
-  border-radius: 9px;
-  margin-right: 10px;
-  padding-top: 14px;
-  padding-bottom: 10px;
-  font-family: "saasduoPAR";
-  font-size: 19px;
-  text-align: center;
-  color: #5d5c69;
-}
+
 
 .input-fieldfix1::placeholder {
   font-family: "saasduoPAR" !important;
@@ -205,7 +193,7 @@ background: linear-gradient(142deg, #ffffff, #f9fdff, #ebfeff, #ddffff, #d9fff0,
   font-size: 19px;
   padding-left: 24px;
   padding-right: 24px;
-
+margin-top: 20px;
   padding-top: 15px;
 
   padding-bottom: 14px;
@@ -1219,32 +1207,10 @@ background-color: #06f;
 <div class="col-left">
   
 <!-- Le paragraphe initial -->
-<p class="saasduotext1" onmouseover="showDropdown()" onmouseout="hideDropdown()" onclick="toggleDropdown()">Your SaaS
- <br> <span class="saas-subtitle">What SaaS mean?</span>
-</p>
+<p class="saasduotext1" onclick="toggleDropdown()">For your SaaS</p>
 
-<!-- Le dropdown avec la définition de SaaS -->
-<div class="saas-dropdown" id="saasDropdown">
-  <a href="#">Loren I-sum definition of SaaS</a>
-</div>
 
-<script>
-  // Fonction pour afficher le dropdown
-  function showDropdown() {
-    document.getElementById("saasDropdown").style.display = "block";
-  }
 
-  // Fonction pour cacher le dropdown
-  function hideDropdown() {
-    document.getElementById("saasDropdown").style.display = "none";
-  }
-
-  // Fonction pour basculer l'affichage du dropdown
-  function toggleDropdown() {
-    var dropdown = document.getElementById("saasDropdown");
-    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
-  }
-</script>
 <p class="saasduotext2">Stop using inappropriate software or expensive developers — Your affordable and on-demand SaaS is here, pay as you go after an upfront fee — We craft personalized end-to-end experiences and systems ; to centralize external or internal features and activities for SMBs and industry leaders.</p>
 <img
 src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/0938293999282922292992922II3II33I3II30393.svg?v=1704069829990"
@@ -1255,29 +1221,27 @@ class="saasduoimg"
   
   
 <div class="col-right">
-  <p class="saasduotext3">Commencez maintenant à créer votre logiciel</p>
-
 
   
   
 <div class="form-container1">
-  
+    <p class="saasduotext3">Free project ideation and studying</p>
   
   
 <div class="dropdown-container" id="dropdownContainer">
     <input type="text" class="dropdown-input" id="dropdownInput" placeholder="Select or type a color">
     <ul class="dropdown-list" id="colorList">
         <li class="dropdown-list-item" data-value="Blue">
-            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Blue"> Blue
+            Blue<img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Blue">
         </li>
         <li class="dropdown-list-item" data-value="Green">
-            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Green"> Green
+            Green <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Green">
         </li>
         <li class="dropdown-list-item" data-value="Yellow">
-            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Yellow"> Yellow
+            Yellow <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Yellow">
         </li>
         <li class="dropdown-list-item" data-value="Brown">
-            <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Brown"> Brown
+            Brown<img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Brown">
         </li>
     </ul>
 </div>
