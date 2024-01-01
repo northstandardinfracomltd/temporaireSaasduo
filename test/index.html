@@ -1,87 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Style pour le dropdown */
+    .saas-dropdown {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      padding: 12px;
+      z-index: 1;
+    }
 
-        .dropdown2 {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-        }
+    /* Style pour le lien de la définition */
+    .saas-dropdown a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 8px;
+      font-size: 14px;
+    }
 
-        .dropdown2-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-
-        .dropdown2-item {
-            padding: 12px 16px;
-            display: block;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .dropdown2-item:hover {
-            background-color: #f9f9f9;
-        }
-
-        .dropdown2-icon {
-            font-size: 24px;
-            cursor: pointer;
-        }
-    </style>
+    /* Style pour le texte "What SaaS mean?" */
+    .saas-subtitle {
+      font-size: 8px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="dropdown2" onclick="toggleDropdown()">
-    <div class="dropdown2-icon">&#8942;</div>
-    <div class="dropdown2-content" id="myDropdown">
-        <a href="#" class="dropdown2-item">Login</a>
-        <a href="#" class="dropdown2-item">Contact</a>
-        <a href="#" class="dropdown2-item">Follow us</a>
-    </div>
+<!-- Le paragraphe initial -->
+<p class="saasduotext1" onmouseover="showDropdown()" onmouseout="hideDropdown()" onclick="toggleDropdown()">For your SaaS
+  <span class="saas-subtitle">What SaaS mean?</span>
+</p>
+
+<!-- Le dropdown avec la définition de SaaS -->
+<div class="saas-dropdown" id="saasDropdown">
+  <a href="#">Loren I-sum definition of SaaS</a>
 </div>
 
 <script>
-    document.addEventListener('click', function (event) {
-        var dropdown = document.getElementById('myDropdown');
-        var icon = document.querySelector('.dropdown2-icon');
+  // Fonction pour afficher le dropdown
+  function showDropdown() {
+    document.getElementById("saasDropdown").style.display = "block";
+  }
 
-        if (!event.target.matches('.dropdown2-icon')) {
-            if (dropdown.style.display === 'block') {
-                dropdown.style.display = 'none';
-                icon.style.color = '#000'; // Change the icon color when dropdown is closed
-            }
-        }
-    });
+  // Fonction pour cacher le dropdown
+  function hideDropdown() {
+    document.getElementById("saasDropdown").style.display = "none";
+  }
 
-    function toggleDropdown() {
-        var dropdown = document.getElementById('myDropdown');
-        var icon = document.querySelector('.dropdown2-icon');
-
-        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-            dropdown.style.display = 'block';
-            icon.style.color = '#00cc00'; // Change the icon color when dropdown is open
-        } else {
-            dropdown.style.display = 'none';
-            icon.style.color = '#000'; // Change the icon color when dropdown is closed
-        }
-    }
+  // Fonction pour basculer l'affichage du dropdown
+  function toggleDropdown() {
+    var dropdown = document.getElementById("saasDropdown");
+    dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+  }
 </script>
 
 </body>
