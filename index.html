@@ -180,16 +180,21 @@ background: linear-gradient(142deg, #ffffff, #f9fdff, #ebfeff, #ddffff, #d9fff0,
 }
       
       .input-fieldfix1 {
+                    display: none;
     margin-top: 20px;
         margin-bottom: 10px;
-    border: 3px solid #ffd000;
+    border: 1px solid #d4d4d7;
     border-radius: 10px;
     font-family: "saasduoPAR";
     font-size: 19px;
     text-align: center;
     color: #5d5c69 !important;
     width: 100%;
-    padding: 0px !important;
+    padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 19px;
+        padding-bottom: 15px;
+        box-shadow: 0px 4px 18px rgb(0 0 0/4%), 0px 2.025px 7.84688px rgba(0,0,0,.027), 0px 0.8px 2.925px rgb(0 0 0/2%), 0px 0.175px 1.04062px rgba(0,0,0,.013);
 }
 
 .input-fieldfix1:hover {
@@ -240,8 +245,8 @@ margin-top: 20px;
           color: #1b1b20 !important;
 font-family: "saasduoPAR" !important;
           background: rgb(255 255 255) !important;
-    padding-top: 17px;
-    padding-bottom: 13px;
+    padding-top: 19px;
+    padding-bottom: 15px;
     padding-left: 0px;
     padding-right: 0px;
     font-size: 22px;
@@ -258,15 +263,34 @@ font-family: "saasduoPAR" !important;
       
       
       
-        .dropdown-input:placeholder {
-          color: #1b1b20 !important;
-        }
+
       
       
-      input[type="text" i] {
-    color: #1b1b20 !important;
+input[type="text" i] {
+ color: #1b1b20 !important;
 }
 
+input[type="text" i]:hover {
+ color: #1b1b20 !important;}
+
+input[type="text" i]:focus {
+ color: #1b1b20 !important;}
+      
+
+.input-fieldfix1:hover {
+ color: #1b1b20 !important;}
+.input-fieldfix1:focus {
+ color: #1b1b20 !important;
+}
+
+.input-fieldfix1::placeholder {
+ color: #1b1b20 !important;
+}
+      
+      .dropdown-input::placeholder {
+ color: #1b1b20 !important;
+}
+      
         .dropdown-list {
           background: rgb(255 255 255) !important;
               box-shadow: 0px 4px 18px rgb(0 0 0/4%), 0px 2.025px 7.84688px rgba(0,0,0,.027), 0px 0.8px 2.925px rgb(0 0 0/2%), 0px 0.175px 1.04062px rgba(0,0,0,.013);
@@ -1296,7 +1320,7 @@ class="saasduoimg"
   
   
 <div class="dropdown-container" id="dropdownContainer">
-    <input type="text" class="dropdown-input" id="dropdownInput" placeholder="Select or type a color">
+    <input type="text" class="dropdown-input" id="dropdownInput" onchange="updateInputField()" placeholder="Select or type a color">
     <ul class="dropdown-list" id="colorList">
         <li class="dropdown-list-item" data-value="Blue">
             Blue<img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Blue">
@@ -1353,9 +1377,29 @@ class="saasduoimg"
 <input
 type="text"
 class="input-fieldfix1"
+       id="inputField"
 placeholder="Name your SaaS"
 />
-  
+    <script>
+        function updateInputField() {
+            var inputField = document.getElementById('dropdownInput');
+            var inputFieldFix1 = document.getElementById('inputField');
+
+            // Déclenchez manuellement l'événement input lorsque le dropdown change
+            var inputEvent = new Event('input');
+            inputField.dispatchEvent(inputEvent);
+
+            // Le reste du script JavaScript reste inchangé
+            if (inputField.value.length >= 3) {
+                inputFieldFix1.style.display = 'block';
+            } else {
+                inputFieldFix1.style.display = 'none';
+            }
+        }
+
+        // Ajoutez également un événement input pour détecter les changements de l'utilisateur
+        document.getElementById('dropdownInput').addEventListener('input', updateInputField);
+    </script>
   
 
   
