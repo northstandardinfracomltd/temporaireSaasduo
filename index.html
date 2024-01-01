@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+<meta name="google" content="notranslate" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SaaSduo — Each interaction matters</title>
+<link rel="icon" href="https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20Logo%20Favicon.png?v=1701104517093"/>
+<link rel="canonical" href="saasduo.com" />
+<meta name="description" content="SaaS engineers based in London, we provide end-to-end SaaS solutions such as internal software, consumer platforms, and startup applications." />
+<meta property="og:title" content="SaaSduo — Each interaction matters" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="saasduo.com" />
+<meta property="og:description" content="SaaS engineers based in London UK, we provide end-to-end SaaS solutions such as internal software, consumer platforms, and startup applications."/>
+<meta property="og:image" content="https://cdn.glitch.global/4d7db198-d06b-43a0-a17b-b43d16d2bbce/SaaSduo%20SEO.png?v=1693254863799" />
+<meta name="twitter:card" content="SaaS engineers based in London UK, we provide end-to-end SaaS solutions such as internal software, consumer platforms, and startup applications." />
+<meta name="keywords" content="SaaSduo, Saasduo, saas duo, roesch ronan, ronan roesch, roesch, north standard infracom ltd, north standard infracom, saasduo">
+ 
+  
     <style>
         body {
             margin: 0;
@@ -998,6 +1016,7 @@ margin-top: 50px !important;
       
       
 .footercolor {
+      margin-top: 110px;
   background: #f4f4f4;
   border-top: 1px solid #d4d4d7;
 
@@ -1286,6 +1305,24 @@ margin-top: 50px !important;
          .input-fieldfix1 {
             display: none; /* Initial hide */
         }
+      
+      
+      
+            
+      .linkregion {
+  font-size: 22px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+        margin-left: 10px;
+}
+      
+      
+            .linkregion:hover {
+  font-size: 22px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+        margin-left: 10px;
+}
       
     </style>
 </head>
@@ -1628,19 +1665,19 @@ placeholder="Name your SaaS"
           
                     
 <button class="justriding34">
-If you don't speak English</button>
+Questions and Answers</button>
                               
                                       <div class="faq-accordion">
 
         <div class="faq-item">
-            <div class="faq-question">Utilisateur francophone</div>
+            <div class="faq-question">What SaaS means</div>
             <div class="faq-answer">
                 <p>SaaSduo est un éditeur et distributeur de solutions digitales, systèmes et logiciels, infrastructures cloud, et plateformes pour le grand public ; offrant une synergie pratique, intuitive, familière et conviviale entre le physique et le numérique pour les entreprises de toutes industries et dimensions — Un produit personnalisé et centralisé répondant à vos critères, idées et demandes ; ainsi que conforme aux standards européens</p>
               <a href="/contact"> <button class="red-price-buttonBX">Contacter SaaSduo</button></a>
             </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">Germanischer Benutzer</div>
+            <div class="faq-question">Owned-SaaS Benefits</div>
             <div class="faq-answer">
                 <p>SaaSduo ist ein Herausgeber und Vertreiber von digitalen Lösungen, Systemen und Software, Cloud-Infrastrukturen und Plattformen für die breite Öffentlichkeit ; Es bietet eine praktische, intuitive, vertraute und benutzerfreundliche Synergie zwischen physischen und digitalen Elementen für Unternehmen aller Branchen und Größen — Ein personalisiertes und zentralisiertes Produkt, das Ihren Kriterien, Ideen und Anforderungen entspricht und den europäischen Standards entspricht</p>
                          <a href="/contact"> <button class="red-price-buttonBX">Kontakt SaaSduo</button></a>
@@ -1648,7 +1685,7 @@ If you don't speak English</button>
         </div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">Utilizador lusófono</div>
+            <div class="faq-question">What about the processus</div>
             <div class="faq-answer">
                 <p>SaaSduo é um editor e distribuidor de soluções digitais, sistemas e software, infraestruturas de nuvem e plataformas para o público em geral ; oferecendo uma sinergia prática, intuitiva, familiar e amigável entre o físico e o digital para empresas de todas as indústrias e dimensões — Um produto personalizado e centralizado que atende aos seus critérios, ideias e solicitações; e que está em conformidade com os padrões europeus.</p>
                           <a href="/contact"> <button class="red-price-buttonBX">Contactar SaaSduo</button></a>
@@ -1980,17 +2017,35 @@ If you don't speak English</button>
       </div>
     </div>
   
-  <div class="sticky-containerx">
+  <div class="sticky-containerx" id="sticky-containerx">
     <div class="left-columnx">  
       <a class="cancellink" href="#link1">Pick your region</a>
-        <a href="#link1">Français</a>
-        <a href="#link2">English</a>
-        <a href="#link3">Deutsh</a>
+        <a class="linkregion" href="#link1">Français</a>
+        <a class="linkregion" href="#link2">English</a>
+        <a class="linkregion" href="#link3">Deutsh</a>
     </div>
     <div class="right-columnx">
         <a href="#" id="close-link">Close</a>
     </div>
 </div>
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Sélectionnez le lien avec l'id "close-link"
+        var closeLink = document.getElementById("close-link");
+
+        // Ajoutez un écouteur d'événements au lien pour détecter les clics
+        closeLink.addEventListener("click", function (event) {
+            // Empêche le comportement par défaut du lien (par exemple, la navigation)
+            event.preventDefault();
+
+            // Sélectionnez la div avec l'id "sticky-containerx" et masquez-la
+            var stickyContainer = document.getElementById("sticky-containerx");
+            stickyContainer.style.display = "none";
+        });
+    });
+</script>
   
 
 </body>
