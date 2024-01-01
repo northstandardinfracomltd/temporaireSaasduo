@@ -413,7 +413,7 @@ input[type="text" i]:focus {
               font-size: 18px !important;
               font-family: "senseistandard" !important;
               letter-spacing: 0px;
-              color: #fff;
+              color: #06f;
               letter-spacing: 0px;
 
               margin-left: 0px;
@@ -1323,7 +1323,7 @@ class="saasduoimg"
   
   
 <div class="dropdown-container" id="dropdownContainer">
-    <input type="text" class="dropdown-input" id="dropdownInput" placeholder="Select or type a color">
+    <input type="text" class="dropdown-input" id="dropdownInput" placeholder="Enter a SaaS usage type">
     <ul class="dropdown-list" id="colorList">
         <li class="dropdown-list-item" data-value="Blue">
             Blue<img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Blue">
@@ -1383,11 +1383,12 @@ class="input-fieldfix1"
 placeholder="Name your SaaS"
        id="inputFieldFix1"
 />
-  <script>
+<script>
     document.addEventListener('DOMContentLoaded', function () {
         // Get references to elements
         var dropdownInput = document.getElementById('dropdownInput');
         var inputFieldFix1 = document.getElementById('inputFieldFix1');
+        var dropdownListItems = document.querySelectorAll('.dropdown-list-item');
 
         // Event listener for input changes
         dropdownInput.addEventListener('input', function () {
@@ -1395,9 +1396,16 @@ placeholder="Name your SaaS"
         });
 
         // Event listener for dropdown item click
-        var dropdownListItems = document.querySelectorAll('.dropdown-list-item');
         dropdownListItems.forEach(function (item) {
             item.addEventListener('click', function () {
+                // Remove 'active' class from all items
+                dropdownListItems.forEach(function (item) {
+                    item.classList.remove('active');
+                });
+
+                // Add 'active' class to the clicked item
+                item.classList.add('active');
+
                 updateInputFieldVisibility();
             });
         });
