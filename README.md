@@ -1,48 +1,40 @@
-# Hello website!
+README Version 27 Nov 2023 17:09 PM (GMT Portugal)
 
-This is a basic HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen ✨ immediately in the preview window. On the left you'll see the files that make up your site, including HTML, JavaScript, and CSS. You can upload assets like images or audio in `assets`. The rest is up to you and your imagination. 🦄
+SAASDUO.COM Codebase
 
-_Last updated: 28 Feb 2023_
+Welcome to the SAASDUO.COM Codebase repository. This repository contains the source code for the website https://saasduo.com/. Please read this README thoroughly before using or contributing to the codebase.
 
-## What's in this project?
+Table of Contents
 
-← `README.md`: That's this file, where you can tell people what your cool website does and how you built it.
+- Description
+- Installation
+- Usage
+- Contributing
+- License
+- Contact
+- Description
 
-← `index.html`: This is the main web page for your site. The HTML defines the structure and content of the page using _elements_. You'll see references in the HTML to the JS and CSS files. Try clicking the image in the center of the page!
+The SAASDUO.COM Codebase powers the SAASDUO website, showcasing our services and information. It is built with HTML, CSS and JS.
 
-← `style.css`: CSS files add styling rules to your content. The CSS applies styles to the elements in your HTML page. The style rules also make the image move when you click it.
+1. Installation
+   Provide step-by-step instructions on how to set up the codebase locally. This could include installing dependencies, setting up a virtual environment, and any other necessary steps.
 
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript. The code in the JavaScript file runs when the page loads, and when the visitor clicks the button you can add using the code in the TODO.
+2. Usage
+   Explain how the codebase is used and highlight any key features of the website. Provide code examples or usage scenarios if applicable.
 
-Open each file and check out the comments (in gray) for more info.
+3. Contributing
+   We welcome contributions from the community! If you'd like to contribute to the SAASDUO.COM Codebase, please follow these guidelines:
 
-## Try this next 🏗️
+4. Fork the repository and create a new branch.
+   Make your changes, whether it's fixing bugs, adding features, or improving documentation.
+   Ensure your code is properly tested.
+   Submit a pull request, detailing your changes and their purpose.
+   By contributing to this project, you agree to abide by our Code of Conduct.
 
-Take a look in `TODO.md` for next steps you can try out in your new site!
+5. License
+   The SAASDUO.COM Codebase is released under the SAASDUO.COM Codebase License. Please review the license file for more information.
 
-___Want a minimal version of this project to build your own website? Check out [Blank Website](https://glitch.com/edit/#!/remix/glitch-blank-website)!___
+6. Contact
+   For any inquiries related to the SAASDUO.COM Codebase or its usage, feel free to contact us at: about@saasduo.com.
 
-## Ready to share your site?
-
-Add these meta tags for SEO and social sharing between your page `<head></head>` tags, changing the values for your site:
-
-```
-<link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-<meta name="description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta name="robots" content="index,follow" />
-<meta property="og:title" content="Hello World!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-<meta property="og:description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta property="og:image" content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"/>
-<meta name="twitter:card" content="summary" />
-```
-
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
-
-## You built this with Glitch!
-
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
-
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
+End of README
