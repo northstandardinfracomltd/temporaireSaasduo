@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     
+    
+    ::selection {
+  background-color: #ffd00082;
+  color: #1b1b20; /* Couleur du texte sélectionné */
+}
+    
           @font-face {
   font-family: saasduoTIL;
   font-weight: bold;
@@ -28,7 +34,7 @@
     
     
     body {
-      display: flex;
+      display: block;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -36,26 +42,26 @@
     }
 
     .logosaasduo {
-      /* Ajoutez le chemin correct vers votre fichier image */
-      background-image: url('chemin/vers/votre/logo.png');
-      background-size: contain;
-      width: 100px; /* Ajustez la largeur selon vos besoins */
-      height: 100px; /* Ajustez la hauteur selon vos besoins */
+text-align: center;
+      padding-top: 65px;
     }
 
     .tilsaasduo {
     font-size: 54px !important;
     font-family: "saasduoTIL" !important;
     letter-spacing: -1.8px !important;
-    color: #1b1b20;
     padding-left: 10px;
     padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: center !important;
-    padding-top: 120px;
-    margin-bottom: 40px;
+    padding-top: 20px;
+    margin-bottom: 30px;
     cursor: default;
+      
+          -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(#49c04f, #2aac67, #79db22);
+    -webkit-background-clip: text;
     }
     
 
@@ -69,11 +75,14 @@
     padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
+      padding-bottom: 20px;
+      padding-top: 20px;
     text-align: center !important;
-    max-width: 1000px;
+    max-width: 620px;
     line-height: 40px;
     cursor: default;
       text-decoration: none !important;
+    
     }
     
     
@@ -125,6 +134,7 @@
     padding-left: 50px;
     padding-bottom: 18px;
     margin-bottom: 70px;
+      max-width: 500px !important;
     border-radius: 15px;
     text-decoration: none !important;
     box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(188 188 188 / 4%), 0px -18px 10.9766px rgb(189 189 189 / 5%), 0px 14px 20.5812px rgb(203 203 203 / 6%), 0px 12px 41.1623px rgb(163 163 163 / 7%), -20px 0px 89.1851px rgb(255 255 255 / 9%);
@@ -163,6 +173,16 @@ background-color: #ee0007;
     color: #06f;
     }
     
+    
+                .saasduologoblack {
+   width: 90%;
+                  max-width: 350px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  text-align: center;
+    }
+    
+    
         
             .linksaasduo:hover {
 -webkit-text-fill-color: transparent;
@@ -174,9 +194,8 @@ background-color: #ee0007;
 <body>
   
     <div class="frame">
-  <div class="logosaasduo"></div>
+  <div class="logosaasduo"><img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/saasduologonoir.svg?v=1704069871504" class="saasduologoblack"></div>
 
-  <p class="tilsaasduo">We're here for you</p>
 
   <p class="txtsaasduo">Our team is available 24/7 in English, French, German, or Portuguese — Send an email to <a href="mailto:about@saasduo.com">about@saasduo.com</a> or call <a href="tel:+447723501018">+44 7723 501018</a></p>
 
@@ -188,4 +207,14 @@ background-color: #ee0007;
   <p class="footertxtsaasduo">This site is protected by reCAPTCHA and the <a class="linksaasduo" href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a class="linksaasduo" href="https://policies.google.com/terms">Terms of Service</a> apply. Copyright 2023 North Standard Infracom, LTD. All rights reserved. <br><br>Not what you're looking for? <a class="linksaasduo" href="/">Return to website</a></p>
 <br><br><br></div>
   </body>
+  
+    <script>
+    if (location.protocol != "https:") {
+      location.href =
+        "https:" +
+        window.location.href.substring(window.location.protocol.length);
+    }
+  </script>
+  
+  
 </html>

@@ -9,7 +9,10 @@
             font-family: Arial, sans-serif;
         }
       
-      
+          ::selection {
+  background-color: #ffd00082;
+  color: #1b1b20; /* Couleur du texte sélectionné */
+}
       
 
         .parent-div {
@@ -1991,4 +1994,14 @@ If you don't speak English</button>
   
 
 </body>
+
+  <script>
+    if (location.protocol != "https:") {
+      location.href =
+        "https:" +
+        window.location.href.substring(window.location.protocol.length);
+    }
+  </script>
+
+
 </html>
