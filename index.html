@@ -1162,7 +1162,6 @@ margin-top: 50px !important;
             position: fixed;
             bottom: 0;
             width: 100%;
-            padding: 10px;
                 
                 
                 background: #f4f4f4 !important;
@@ -1173,6 +1172,8 @@ margin-top: 50px !important;
         .left-columnx {
             display: flex;
             align-items: center;
+          padding-left: 20px;
+    padding-top: 4px;
         }
 
         .left-columnx a {
@@ -1308,20 +1309,54 @@ margin-top: 50px !important;
       
       
       
-            
+                     
+      .cancellink {
+  font-size: 22px !important;
+  font-family: "saasduoPAR" !important;
+  letter-spacing: 0px;
+        margin-left: 10px;
+        color: #1b1b20;
+}
+      
+      
       .linkregion {
   font-size: 22px !important;
   font-family: "saasduoPAR" !important;
   letter-spacing: 0px;
         margin-left: 10px;
+        color: #06f !important;
 }
       
       
             .linkregion:hover {
-  font-size: 22px !important;
-  font-family: "saasduoPAR" !important;
-  letter-spacing: 0px;
-        margin-left: 10px;
+  color: #06f;
+}
+      
+                  .btnclose {
+
+background-color: #06f !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    cursor: pointer !important;
+    font-size: 19px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    padding-top: 16px !important;
+    padding-bottom: 14px !important;
+    font-family: "saasduoBTN" !important;
+    margin-top: 16px !important;
+    margin-right: 15px !important;
+    margin-bottom: 15px !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+      
+      }
+      .btnclose:hover {
+    background-color: #1128f5;
+    box-shadow: 0 0 0px 4px #008eff38;
+            cursor: pointer !important;
+
 }
       
     </style>
@@ -2019,13 +2054,13 @@ Questions and Answers</button>
   
   <div class="sticky-containerx" id="sticky-containerx">
     <div class="left-columnx">  
-      <a class="cancellink" href="#link1">Pick your region</a>
+      <a class="cancellink" href="#link1">Languages and Regions</a>
         <a class="linkregion" href="#link1">Français</a>
         <a class="linkregion" href="#link2">English</a>
-        <a class="linkregion" href="#link3">Deutsh</a>
+        <a class="linkregion" href="#link3">Deutsch</a>
     </div>
     <div class="right-columnx">
-        <a href="#" id="close-link">Close</a>
+        <a  class="btnclose" href="#" id="close-link">Close/OK</a>
     </div>
 </div>
   
