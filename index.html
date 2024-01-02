@@ -195,16 +195,17 @@ margin-right: auto;
 margin-top: 20px;
 margin-bottom: 10px;
 border: 1px solid #d4d4d7;
-border-radius: 10px;
-font-family: "saasduoPAR";
-font-size: 19px;
+border-radius: 15px;
+font-family: "saasduoPAR" !important;
+font-size: 24px;
 text-align: center;
 color: #5d5c69 !important;
 width: 100%;
 padding-left: 0px;
 padding-right: 0px;
 padding-top: 19px;
-padding-bottom: 15px;       
+padding-bottom: 15px;   
+box-shadow: 0px 4px 18px rgb(0 0 0/4%), 0px 2.025px 7.84688px rgba(0,0,0,.027), 0px 0.8px 2.925px rgb(0 0 0/2%), 0px 0.175px 1.04062px rgba(0,0,0,.013);
 }
 
 .input-fieldfix1:hover {
@@ -213,29 +214,31 @@ box-shadow: 0 0 0px 4px #008eff38;
 
 .input-fieldfix1::placeholder {
 font-family: "saasduoPAR" !important;
-font-size: 19px;
+font-size: 24px;
 }
 
 .red-buttonfix1 {
 width: 100%;
-background-color: #ee0007;
+width: 100%;
+background-color: #0066ff;
 color: white;
 border: none;
-border-radius: 9px;
-cursor: pointer;
-font-size: 19px;
+border-radius: 15px;
+cursor: pointer  !important;
+font-size: 22px;
 padding-left: 24px;
 padding-right: 24px;
 margin-top: 20px;
 padding-top: 15px;
 padding-bottom: 14px;
 font-family: "saasduoBTN" !important;
-height: 53px;
+height: 60px;
 }
 
 .red-buttonfix1:hover {
-background-color: #cf0006;
+background-color: #1128f5;
 box-shadow: 0 0 0px 4px #008eff38;
+cursor: pointer !important;
 }
 
 .dropdown-container {
@@ -246,7 +249,12 @@ text-align: center;
 margin-left: auto;
 margin-right: auto;
 }
+  
+*:focus {
+outline: none !important;
+}
 
+  
 .dropdown-input {
 color: #1b1b20 !important;
 font-family: "saasduoPAR" !important;
@@ -255,7 +263,7 @@ padding-top: 19px;
 padding-bottom: 15px;
 padding-left: 0px;
 padding-right: 0px;
-font-size: 22px;
+font-size: 24px;
 border: 1px solid #d4d4d7;
 border-radius: 15px;
 outline: none;
@@ -1725,7 +1733,7 @@ class="saasduoimg"
 <p class="saasduotext3">Did you know — The ideation and technical options session is free by videoconference or in person.</p>
   
 <div class="dropdown-container" id="dropdownContainer">
-<input type="text" class="dropdown-input" id="dropdownInput" placeholder="Enter a SaaS usage type">
+<input maxlength="35" type="text" class="dropdown-input" id="dropdownInput" placeholder="Enter a SaaS usage type">
 <ul class="dropdown-list" id="colorList">
 <li class="dropdown-list-item" data-value="Blue">
 Maintenance System<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Blue">
@@ -1777,6 +1785,7 @@ type="text"
 class="input-fieldfix1"
 placeholder="Name your SaaS"
 id="inputFieldFix1"
+maxlength="30" 
 />
 <script>
 document.addEventListener('DOMContentLoaded', function () {
