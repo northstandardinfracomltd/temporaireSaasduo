@@ -330,59 +330,61 @@ color: #0066FF;
   .lastly:hover {
 border-radius: 0px 0px 14px 14px !important;
 }
-      
-  
-.dropdown2 {
-position: relative;
-display: inline-block;
-cursor: pointer;
-padding-left: 10px;
-padding-right: 10px;
-padding-top: 4px;
-padding-bottom: 3px;
-border-radius: 10px;
-background: #0000000f;
+      .dropdown2 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px;
+  background: #0000000f;
 }
-          
+
 .dropdown2:hover {
-background: #0000000f;
-box-shadow: 0 0 0px 4px #008eff38;
+  background: #0000000f;
+  box-shadow: 0 0 0px 4px #008eff38;
+}
+
+.dropdown2-clickable-area {
+  display: flex;
+  align-items: center;
+  padding: 4px 30px 4px 10px;
+  border-radius: 10px;
+  background: red;
 }
 
 .dropdown2-content {
-display: none;
-position: absolute;
-background-color: #fff;
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-z-index: 1;
-margin-left: -80px;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-left: -80px;
 }
 
 .dropdown2-item {
-padding: 12px 16px;
-display: block;
-text-decoration: none;
-color: #333;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  color: #333;
 }
 
 .dropdown2-item:hover {
-background-color: #f9f9f9;
+  background-color: #f9f9f9;
+}
+.dropdown2-icon {
+    width: 30px; /* Ajustez la largeur de l'icône selon vos besoins */
+    height: 30px; /* Ajustez la hauteur de l'icône selon vos besoins */
+    cursor: pointer;
 }
 
-.dropdown2-icon {
-font-size: 30px;
-font-weight: bold;
-color: #FFF !important;
-cursor: pointer;
-}
+
       
 .navlogo {
-margin-top: 0px;
-margin-bottom: -5.5px;
+margin-top: -4px;
+margin-bottom: 8px;
 margin-right: 12px;
 margin-left: 0px !important;
 cursor: pointer;
-max-width: 280px;
+max-width: 190px;
 width: 100%;
 }
       
@@ -1443,13 +1445,17 @@ opacity: 0.5 !important;
 <img class="navlogo" src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/SaaSduo.com.svg?v=1704067580815" alt="">     
           
 <div class="dropdown2" onclick="toggleDropdown()">
-<div class="dropdown2-icon">&#8942;</div>
-<div class="dropdown2-content" id="myDropdown">
-<a href="#" class="dropdown2-item">Login</a>
-<a href="#" class="dropdown2-item">Contact</a>
-<a href="#" class="dropdown2-item">Follow us</a>
+    <div class="dropdown2-icon">
+        <img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Your Icon">
+    </div>
+    <div class="dropdown2-content" id="myDropdown">
+        <a href="#" class="dropdown2-item">Login</a>
+        <a href="#" class="dropdown2-item">Contact</a>
+        <a href="#" class="dropdown2-item">Follow us</a>
+    </div>
 </div>
-</div>
+
+
 
 <script>
 document.addEventListener('click', function (event) {
