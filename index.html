@@ -1503,6 +1503,7 @@ opacity: 0.5 !important;
         padding-left: 13px;
         padding-right: 13px;
         cursor: default;
+        z-index: 2000;
       }
 
       @media (min-width: 100px) and (max-width: 819px) {
@@ -1568,6 +1569,9 @@ opacity: 0.5 !important;
 </head>
 <body>
 <div class="parent-div">
+  
+  
+  
 <div class="div-1">
 <img class="navlogo" src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/SaaSduo.com.svg?v=1704067580815" alt="">     
           
@@ -1588,15 +1592,21 @@ opacity: 0.5 !important;
           </div>
   </div>
 
-   <script>
-   
-          const menuIconlutte = document.getElementById("menu-iconlutte");
-          const iconlutte = document.getElementById("iconlutte");
+  <script>
+    document.addEventListener("click", function (event) {
+      const menuIconlutte = document.getElementById("menu-iconlutte");
+      const iconlutte = document.getElementById("iconlutte");
 
-          menuIconlutte.addEventListener("click", function () {
-            iconlutte.classList.toggle("active");
-          });
-        </script>
+      // Vérifier si le clic n'est pas à l'intérieur du menu
+      if (!menuIconlutte.contains(event.target)) {
+        // Fermer le menu
+        iconlutte.classList.remove("active");
+      } else {
+        // Toggle le menu
+        iconlutte.classList.toggle("active");
+      }
+    });
+  </script>
 
 
 
