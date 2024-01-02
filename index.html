@@ -245,7 +245,7 @@ padding-left: 0px;
 padding-right: 0px;
 font-size: 22px;
 border: 1px solid #d4d4d7;
-border-radius: 10px;
+border-radius: 15px;
 outline: none;
 width: 100% !important;
 max-width: 500px;
@@ -294,7 +294,7 @@ left: 0;
 width: 100%;
 border: 1px solid #d4d4d7;
 border-top: none;
-border-radius: 0 0 10px 10px;
+border-radius: 0 0 15px 15px;
 display: none;
 list-style: none;
 padding: 0;
@@ -303,27 +303,29 @@ z-index: 999;
 }
 
 .dropdown-list-item {
-padding: 16px 20px 16px 20px;
-    font-family: 'saasduoPAR' !important;
-    font-size: 24px !important;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+padding: 17px 20px 15px 20px;
+font-family: 'saasduoPAR' !important;
+font-size: 24px !important;
+cursor: pointer;
+display: flex;
+align-items: center;
 }
 
 .dropdown-list-item img {
-    width: 28px;
-    height: 28px;
-    margin-left: 10px;
-    margin-top: -4px;
+width: 28px;
+height: 28px;
+margin-left: 7px;
+margin-top: -4px;
 }
 
 .dropdown-list-item:hover {
-background-color: #f4f4f4;
+
+background: linear-gradient(40deg, #ddffff, #ddffff, #c9f1c8);
+color: #0066FF;
 }
       
   .lastly:hover {
-border-radius: 0px 0px 12px 12px !important;
+border-radius: 0px 0px 14px 14px !important;
 }
       
   
@@ -1293,16 +1295,16 @@ class="saasduoimg"
 <input type="text" class="dropdown-input" id="dropdownInput" placeholder="Enter a SaaS usage type">
 <ul class="dropdown-list" id="colorList">
 <li class="dropdown-list-item" data-value="Blue">
-Blue<img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Blue">
+Blue<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Blue">
 </li>
 <li class="dropdown-list-item" data-value="Green">
-Green <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Green">
+Green <img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Green">
 </li>
 <li class="dropdown-list-item" data-value="Yellow">
-Yellow <img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Yellow">
+Yellow <img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Yellow">
 </li>
 <li class="dropdown-list-item lastly" data-value="Brown">
-Brown<img src="https://cdn.glitch.global/9346fc7c-a637-4c43-b28a-353c20807782/PopularKesakoPrint.svg?v=1703327805787" alt="Brown">
+Brown<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Brown">
 </li>
 </ul>
 </div>
@@ -1313,11 +1315,11 @@ const colorList = document.getElementById('colorList');
 const dropdownContainer = document.getElementById('dropdownContainer');
 function openDropdown() {
 colorList.style.display = 'block';
-dropdownInput.style.borderRadius = '12px 12px 0 0';
+dropdownInput.style.borderRadius = '15px 15px 0 0';
 }
 function closeDropdown() {
 colorList.style.display = 'none';
-dropdownInput.style.borderRadius = '12px';
+dropdownInput.style.borderRadius = '15px';
 }
 dropdownInput.addEventListener('focus', openDropdown);
 dropdownInput.addEventListener('input', closeDropdown);
