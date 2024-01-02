@@ -1651,27 +1651,55 @@ cursor: default;
     font-family: "saasduoPAR" !important;
     line-height: 27px;
 }
+  
+  
+
       
 </style>
 </head>
 <body>
+  
+  
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Sélectionnez tous les éléments avec la classe "lazyload"
+            var lazyloadElements = document.querySelectorAll(".lazyload");
+
+            // Appliquez les styles
+            lazyloadElements.forEach(function(element) {
+                element.style.filter = "blur(7px)";
+                element.style.opacity = "0.2";
+            });
+
+            // Supprimez les styles après 3 secondes
+            setTimeout(function() {
+                lazyloadElements.forEach(function(element) {
+                    element.style.filter = "";
+                    element.style.opacity = "";
+                });
+            }, 3000);
+        });
+    </script>
+  
+  
+  
 <div class="parent-div">
   
   
-      <div class="outer-containerdoty">
+      <div class="outer-containerdoty lazyload">
       
         <div class="inner-containerdoty">
             <div class="columndoty">
-             <img class="navlogo" src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/SaaSduo.com.svg?v=1704067580815" alt="">  
+             <img class="navlogo lazyload" src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/SaaSduo.com.svg?v=1704067580815" alt="">  
             </div>
-            <div class="columndoty">
-                               <div class="menu-iconlutte" id="menu-iconlutte">
-          <div class="iconlutte" id="iconlutte">
+            <div class="columndoty lazyload">
+                               <div class="menu-iconlutte lazyload" id="menu-iconlutte">
+          <div class="iconlutte lazyload" id="iconlutte">
             <div class="dotlutte"></div>
             <div class="dotlutte"></div>
             <div class="dotlutte"></div>
           </div>
-          <div class="dropdownlutte" id="dropdownlutte">
+          <div class="dropdownlutte lazyload" id="dropdownlutte">
             <a class="itemlutte itemBBBlutte" href="/uk">Kesako UK English</a>
             <a class="itemlutte" href="/sustainability">Fossil Free Company</a>
             <a class="itemlutte" href="/terms-privacy">Terms and Privacy</a>
@@ -1738,11 +1766,11 @@ icon.style.color = '#000'; // Change the icon color when dropdown is closed
 </div>
 <div class="div-2">
 <div class="col-left">
-<p class="saasduotext1" >Leader of SaaS<p class="saasduotext1black">that Users Love</p></p>
-<p class="saasduotext2">Stop using inappropriate software or expensive developers — Your affordable and on-demand SaaS is here, pay as you go after an upfront fee — We craft personalized end-to-end experiences and systems ; to centralize external or internal features and activities for SMBs and industry leaders.</p>
+<p class="saasduotext1 lazyload" >Leader of SaaS<p class="saasduotext1black lazyload">that Users Love</p></p>
+<p class="saasduotext2 lazyload">Stop using inappropriate software or expensive developers — Your affordable and on-demand SaaS is here, pay as you go after an upfront fee — We craft personalized end-to-end experiences and systems ; to centralize external or internal features and activities for SMBs and industry leaders.</p>
 <img
 src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/0938293999282922292992922II3II33I3II30393.svg?v=1704069829990"
-class="saasduoimg"
+class="saasduoimg lazyload"
 />
 </div>
 
@@ -1750,25 +1778,25 @@ class="saasduoimg"
 <div class="form-container1">
   
     <div class="helper">
-    <img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/3dotSaaSdu3333o.png?v=1704217738368" alt="Icon" class="iconhelper">
-    <div><p class="saasduotext3">Did you know — The ideation and technical options session is free by videoconference or in person.</p></div>
+    <img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/3dotSaaSdu3333o.png?v=1704217738368" alt="Icon" class="iconhelper lazyload">
+    <div><p class="saasduotext3 lazyload">Did you know — The ideation and technical options session is free by videoconference or in person.</p></div>
   </div> 
   
   
   
 <div class="dropdown-container" id="dropdownContainer">
-<input maxlength="35" type="text" class="dropdown-input" id="dropdownInput" placeholder="Enter a SaaS usage type">
-<ul class="dropdown-list" id="colorList">
-<li class="dropdown-list-item" data-value="Blue">
+<input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput" placeholder="Enter a SaaS usage type">
+<ul class="dropdown-list lazyload" id="colorList">
+<li class="dropdown-list-item lazyload" data-value="Blue">
 Maintenance System<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Blue">
 </li>
-<li class="dropdown-list-item" data-value="Green">
+<li class="dropdown-list-item lazyload" data-value="Green">
 Booking Operations<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Green">
 </li>
-<li class="dropdown-list-item" data-value="Yellow">
+<li class="dropdown-list-item lazyload" data-value="Yellow">
 Customer Platform<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Yellow">
 </li>
-<li class="dropdown-list-item lastly" data-value="Brown">
+<li class="dropdown-list-item lastly lazyload" data-value="Brown">
 Internal<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Brown">
 </li>
 </ul>
@@ -1839,7 +1867,7 @@ inputFieldFix1.style.display = 'none';
 }
 });
 </script>
-<div class="radio-container">
+<div class="radio-container lazyload">
 <label for="termsRadio" class="custom-radio">
 <input type="radio" id="termsRadio" name="termsRadio" />
 <span class="radio-bullet"></span>
@@ -1854,7 +1882,7 @@ I have read
 </label>
 </div>
   
-<a href="https://9362i9273i0012i6401i7352i9362i9273i0012i6401i7352i0012.glitch.me/"><button class="red-buttonfix1">Get started</button></a>
+<a href="https://9362i9273i0012i6401i7352i9362i9273i0012i6401i7352i0012.glitch.me/"><button class="red-buttonfix1 lazyload">Get started</button></a>
 
 </div>
 </div>
