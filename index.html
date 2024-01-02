@@ -147,22 +147,7 @@ line-height: 40px;
 cursor: default;
 }
       
-.saasduotext3 {
-font-size: 24px !important;
-font-family: "saasduoPAR" !important;
-letter-spacing: 0px;
-padding-left: 15px;
-padding-bottom: 10px;
-padding-right: 15px;
-margin-left: auto;
-margin-right: auto;
-text-align: center;
-line-height: 40px;
-cursor: default;
--webkit-text-fill-color: transparent;
-background: -webkit-linear-gradient(175deg, #49c04f, #2aac67, #79db22);
--webkit-background-clip: text;
-}
+
       
 .saasduoimg {
 width: 100%;
@@ -485,20 +470,19 @@ margin-top: 20px;
 }
 
 .custom-button {
-background-color: #ee0007;
-color: white;
-border: none;
-border-radius: 9px;
-cursor: pointer;
-font-size: 19px;
-padding-left: 24px;
-padding-right: 24px;
-padding-top: 15px;
-padding-bottom: 14px;
-font-family: "saasduoBTN" !important;
-height: 53px;
-white-space: nowrap;
-text-decoration: none !important;
+    background-color: #ee0007;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 19px !important;
+    padding-bottom: 19px !important;
+    font-family: "saasduoBTN" !important;
+    white-space: nowrap;
+    text-decoration: none !important;
 }
 
 .custom-button:hover {
@@ -1634,6 +1618,37 @@ opacity: 0.5 !important;
     max-width: 210px;
     width: 100%;
 }
+  
+  
+  
+      .helper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px;
+      border: 0px solid transparent; 
+    }
+
+    .iconhelper {
+      max-width: 30px;
+      height: auto;
+    }
+  
+  .saasduotext3 {
+letter-spacing: 0px;
+padding-left: 15px;
+padding-bottom: 10px;
+padding-right: 15px;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+line-height: 40px;
+cursor: default;
+    color: #1b1b20;
+    font-size: 14px !important;
+    font-family: "saasduoPAR" !important;
+    line-height: 27px;
+}
       
 </style>
 </head>
@@ -1681,6 +1696,7 @@ opacity: 0.5 !important;
         iconlutte.classList.toggle("active");
       }
     });
+  
   </script>
 
 
@@ -1730,7 +1746,13 @@ class="saasduoimg"
 
 <div class="col-right">
 <div class="form-container1">
-<p class="saasduotext3">Did you know — The ideation and technical options session is free by videoconference or in person.</p>
+  
+    <div class="helper">
+    <img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/3dotSaaSdu3333o.png?v=1704217738368" alt="Icon" class="iconhelper">
+    <div><p class="saasduotext3">Did you know — The ideation and technical options session is free by videoconference or in person.</p></div>
+  </div> 
+  
+  
   
 <div class="dropdown-container" id="dropdownContainer">
 <input maxlength="35" type="text" class="dropdown-input" id="dropdownInput" placeholder="Enter a SaaS usage type">
