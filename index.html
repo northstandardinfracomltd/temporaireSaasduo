@@ -1601,24 +1601,28 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 0px;
 padding: 0px;
-grid-template-columns: 75% 25%;    
+grid-template-columns: 70% 30%;    
 }
+  
 .columndoty {
 padding: 0px;
 text-align: left;
 }
-  
-  
-  .navlogo {
+
+.navlogo {
     margin-bottom: 6px;
     margin-right: 12px;
-    margin-left: 14px !important;
-    margin-top: 7px !important;
+    margin-left: 25px !important;
+    margin-top: 5px !important;
     cursor: pointer;
-    max-width: 210px;
+    max-width: 240px;
     width: 100%;
 }
 
+  .navlogo:hover {
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+}
   
   
       .helper {
@@ -1662,27 +1666,25 @@ cursor: default;
 }
   
   
-      /* Style global */
-    body293 {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f4f4f4;
-    }
 
-    /* Style du bouton et du dropdown */
-    .button293 {
-      position: relative;
-      display: inline-block;
-      background-color: #3498db;
-      color: #fff;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
+
+.button293 {
+position: relative;
+display: inline-block;
+background-color: transparent;
+color: #06f;
+border: 0px solid transparent;
+border-radius: 0px;
+cursor: pointer !important;
+font-size: 22px;
+padding-left: 8px;
+padding-right: 8px;
+margin-top: 6px;
+padding-top: 10px;
+padding-bottom: 10px;
+letter-spacing: 0px;
+font-family: "saasduoPAR" !important;
+}
 
     .dropdown293 {
       display: none;
@@ -1756,10 +1758,6 @@ cursor: default;
   </div>
 
   <script>
-    // Fonction pour changer la couleur
-    function changeColor(color) {
-      alert("Vous avez sélectionné la couleur : " + color);
-    }
 
     // Fermer le dropdown si l'utilisateur clique ailleurs
     window.addEventListener('click', function(e) {
