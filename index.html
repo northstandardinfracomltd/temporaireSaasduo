@@ -1593,21 +1593,20 @@ opacity: 0.5 !important;
          
         }
 
-        .inner-containerdoty {
-    margin-left: auto;
-    border-radius: 25px 0px 0px 25px;
-    max-width: 260px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px;
-    padding: 0px;
-    grid-template-columns: 85% 15%;    
-        }
-
-        .columndoty {
-            padding: 0px;
-            text-align: left;
-        }
+.inner-containerdoty {
+margin-left: auto;
+border-radius: 25px 0px 0px 25px;
+max-width: 400px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0px;
+padding: 0px;
+grid-template-columns: 75% 25%;    
+}
+.columndoty {
+padding: 0px;
+text-align: left;
+}
   
   
   .navlogo {
@@ -1662,6 +1661,50 @@ cursor: default;
     width: 100%;
 }
   
+  
+      /* Style global */
+    body293 {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    /* Style du bouton et du dropdown */
+    .button293 {
+      position: relative;
+      display: inline-block;
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .dropdown293 {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content293 button, .dropdown-content293 a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+    }
+
+    .dropdown-content293 button:hover, .dropdown-content293 a:hover {
+      background-color: #f9f9f9;
+    }
       
 </style>
 </head>
@@ -1701,42 +1744,52 @@ cursor: default;
              <img class="navlogo lazyload" src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/Logo%20SaaSduo.com%202024.svg?v=1704377716018" alt="">  
             </div>
             <div class="columndoty lazyload">
-                             <div class="menu-iconlutte lazyload" id="menu-iconlutte">
-      
-                               
-                               <span id="iconlutte" class="menu-text">Menu</span>
-                               
-                               
-          <div class="dropdownlutte lazyload" id="dropdownlutte">
-            <a class="itemlutte itemBBBlutte" href="/uk">Kesako UK English</a>
-            <a class="itemlutte" href="/sustainability">Fossil Free Company</a>
-            <a class="itemlutte" href="/terms-privacy">Terms and Privacy</a>
-                        <a class="itemlutte" href="/print">Kesako Print Center</a>
 
-          </div>
+              
+  <div class="button293" id="button293">
+    Options
+    <div class="dropdown293" id="dropdown293">
+      <button class="dropdown-content293" onclick="changeColor('Bleu')">Bleu</button>
+      <button class="dropdown-content293" onclick="changeColor('Orange')">Orange</button>
+      <button class="dropdown-content293" onclick="changeColor('Vert')">Vert</button>
+    </div>
   </div>
+
+  <script>
+    // Fonction pour changer la couleur
+    function changeColor(color) {
+      alert("Vous avez sélectionné la couleur : " + color);
+    }
+
+    // Fermer le dropdown si l'utilisateur clique ailleurs
+    window.addEventListener('click', function(e) {
+      const dropdown = document.getElementById('dropdown293');
+      const button = document.getElementById('button293');
+      if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.style.display = 'none';
+      }
+    });
+
+    // Ouvrir le dropdown au survol du bouton
+    document.getElementById('button293').addEventListener('mouseover', function() {
+      document.getElementById('dropdown293').style.display = 'block';
+    });
+
+    // Fermer le dropdown lorsque le curseur quitte le bouton
+    document.getElementById('button293').addEventListener('mouseleave', function() {
+      document.getElementById('dropdown293').style.display = 'none';
+    });
+  </script>
+              
+              
+              
 
             </div>
         </div>
         
         
         
-  <script>
-    document.addEventListener("click", function (event) {
-      const menuIconlutte = document.getElementById("menu-iconlutte");
-      const iconlutte = document.getElementById("iconlutte");
-
-      // Vérifier si le clic n'est pas à l'intérieur du menu
-      if (!menuIconlutte.contains(event.target)) {
-        // Fermer le menu
-        iconlutte.classList.remove("active");
-      } else {
-        // Toggle le menu
-        iconlutte.classList.toggle("active");
-      }
-    });
-  
-  </script>
+ 
 
 
         
