@@ -1950,16 +1950,15 @@ dropdownContainer.addEventListener('mouseleave', closeDropdown);
   
   
 <div class="dropdown-container ninjamass" id="dropdownContainer2">
-  <input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput2" placeholder="SaaS default language">
+  <input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput2" placeholder="SaaS default language" onchange="updateTexts()">
   <ul class="dropdown-list lazyload" id="colorList2">
-    <li class="dropdown-list-item lazyload" data-value="English" onclick="changeButtonText('Get started')">English</li>
-    <li class="dropdown-list-item lazyload" data-value="Français" onclick="changeButtonText('Poursuivre')">Français</li>
-    <li class="dropdown-list-item lazyload" data-value="Português" onclick="changeButtonText('Iniciar')">Português</li>
-    <li class="dropdown-list-item lazyload" data-value="Deutsch" onclick="changeButtonText('Loslegen')">Deutsch</li>
-    <li class="dropdown-list-item lastly lazyload" data-value="Español" onclick="changeButtonText('Empezar')">Español</li>
+    <li class="dropdown-list-item lazyload" data-value="English" data-button-text="Get started" data-radio-text="I have read|terms of use">English</li>
+    <li class="dropdown-list-item lazyload" data-value="Français" data-button-text="Poursuivre" data-radio-text="J’ai lu les|conditions d’utilisation">Français</li>
+    <li class="dropdown-list-item lazyload" data-value="Português" data-button-text="Iniciar" data-radio-text="Eu li|termos de uso">Português</li>
+    <li class="dropdown-list-item lazyload" data-value="Deutsch" data-button-text="Loslegen" data-radio-text="Ich habe gelesen|Nutzungsbedingungen">Deutsch</li>
+    <li class="dropdown-list-item lazyload" data-value="Español" data-button-text="Empezar" data-radio-text="He leído|condiciones de uso">Español</li>
   </ul>
 </div>
-
 
 
   
@@ -2056,39 +2055,53 @@ document.addEventListener('DOMContentLoaded', function () {
   
   
   
-  
-
 <div class="radio-container lazyload">
-<label for="termsRadio" class="custom-radio">
-<input type="radio" id="termsRadio" name="termsRadio" />
-<span class="radio-bullet"></span>
-</label>
-<label for="termsRadio" class="radio-text">
-I have read
-<span class="link-span"
-><a href="/terms-privacy" class="link-span2" target="_blank"
->terms of use</a
-></span
->
-</label>
+  <label for="termsRadio" class="custom-radio">
+    <input type="radio" id="termsRadio" name="termsRadio" onclick="updateTexts()" />
+    <span class="radio-bullet"></span>
+  </label>
+  <label id="radioTextLabel" for="termsRadio" class="radio-text">
+    <span id="readText">I have read</span>
+    <span id="termsLinkText">
+      <a href="/terms-privacy" class="link-span2" target="_blank">terms of use</a>
+    </span>
+  </label>
 </div>
   
   
   
-  
+
 <a href="https://9362i9273i0012i6401i7352i9362i9273i0012i6401i7352i0012.glitch.me/">
   <button id="submitButton" class="red-buttonfix1 lazyload" onclick="validateForm()">Get started</button>
 </a>
-  <script>
-  function changeButtonText(text) {
+
+<script>
+  function changeButtonTextAndRadioLabel(text, radioLabel) {
     document.getElementById('submitButton').innerText = text;
+    document.getElementById('radioTextLabel').innerText = radioLabel;
   }
 
-  function validateForm() {
-    // Ajoutez ici votre logique pour valider le formulaire
-    // Cette fonction est appelée lorsque le bouton est cliqué
+  function updateTexts() {
+    var language = document.getElementById('dropdownInput2').value;
+    var selectedLanguageItem = document.querySelector('.dropdown-list-item[data-value="' + language + '"]');
+
+    if (selectedLanguageItem) {
+      var buttonText = selectedLanguageItem.getAttribute('data-button-text');
+      var radioText = selectedLanguageItem.getAttribute('data-radio-text');
+
+      if (buttonText && radioText) {
+        changeButtonTextAndRadioLabel(buttonText, radioText);
+      }
+    } else {
+      // Par défaut, en anglais
+      changeButtonTextAndRadioLabel('Get started', 'I have read terms of use');
+    }
   }
 </script>
+
+
+
+
 
   
   
