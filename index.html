@@ -1968,8 +1968,43 @@ Deutsch
 Español
 </li>
 </ul>
+  
+  
 </div>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Récupérer les éléments du DOM
+    var dropdownInput = document.getElementById('dropdownInput2');
+    var button = document.querySelector('.red-buttonfix1');
+
+    // Ajouter un gestionnaire d'événements pour le changement dans le dropdown
+    dropdownInput.addEventListener('change', function() {
+      // Récupérer la valeur sélectionnée dans le dropdown
+      var selectedValue = dropdownInput.value;
+
+      // Modifier le texte du bouton en fonction de la valeur sélectionnée
+      button.textContent = {
+        'English': 'Get started',
+        'Français': 'Poursuivre',
+        'Português': 'Iniciar',
+        'Deutsch': 'Loslegen',
+        'Español': 'Empezar'
+      }[selectedValue] || 'Get started';
+    });
+
+    // Fonction de validation du formulaire
+    function validateForm() {
+      // Ajoutez votre logique de validation ici
+      alert('Form validated!');
+    }
+
+    // Ajouter un gestionnaire d'événements pour le clic sur le bouton
+    button.addEventListener('click', validateForm);
+  });
+</script>
+
+  
 <script>
 const dropdownInput2 = document.getElementById('dropdownInput2');
 const colorList2 = document.getElementById('colorList2');
