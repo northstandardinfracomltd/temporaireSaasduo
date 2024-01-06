@@ -1761,12 +1761,9 @@ border-radius: 0px;
   
   
 <div class="parent-div">
-  
-  
-      <div class="outer-containerdoty lazyload">
-      
-        <div class="inner-containerdoty">
-            <div class="columndoty">
+<div class="outer-containerdoty lazyload">
+<div class="inner-containerdoty">
+<div class="columndoty">
               
                     <button  class="button293parent" ><a  class="button293" href="https://example.com">Sign in</a></button>
 
@@ -1876,8 +1873,9 @@ Internal<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e
 </li>
 </ul>
 </div>
-
-<script>
+  
+  
+  <script>
 const dropdownInput = document.getElementById('dropdownInput');
 const colorList = document.getElementById('colorList');
 const dropdownContainer = document.getElementById('dropdownContainer');
@@ -1905,6 +1903,55 @@ closeDropdown();
 });
 dropdownContainer.addEventListener('mouseenter', openDropdown);
 dropdownContainer.addEventListener('mouseleave', closeDropdown);
+</script>
+  
+  
+<div class="dropdown-container2" id="dropdownContainer2">
+<input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput2" placeholder="Default SaaS Language">
+<ul class="dropdown-list lazyload" id="colorList2">
+<li class="dropdown-list-item lazyload" data-value="Blue">
+Maintenance System<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Blue">
+</li>
+<li class="dropdown-list-item lazyload" data-value="Green">
+Booking Operations<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Green">
+</li>
+<li class="dropdown-list-item lazyload" data-value="Yellow">
+Customer Platform<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Yellow">
+</li>
+<li class="dropdown-list-item lastly lazyload" data-value="Brown">
+Internal<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Brown">
+</li>
+</ul>
+</div>
+
+<script>
+const dropdownInput2 = document.getElementById('dropdownInput2');
+const colorList2 = document.getElementById('colorList2');
+const dropdownContainer2 = document.getElementById('dropdownContainer2');
+function openDropdown() {
+colorList2.style.display = 'block';
+dropdownInput2.style.borderRadius = '15px 15px 0 0';
+}
+function closeDropdown() {
+colorList2.style.display = 'none';
+dropdownInput2.style.borderRadius = '15px';
+}
+dropdownInput2.addEventListener('focus', openDropdown);
+dropdownInput2.addEventListener('input', closeDropdown);
+document.addEventListener('click', function (event) {
+if (!event.target.matches('.dropdown-input') && !event.target.closest('.dropdown-container')) {
+closeDropdown();
+}
+});
+colorList2.addEventListener('click', function (event) {
+if (event.target.matches('.dropdown-list-item')) {
+const selectedValue = event.target.getAttribute('data-value');
+dropdownInput2.value = selectedValue;
+closeDropdown();
+}
+});
+dropdownContainer2.addEventListener('mouseenter', openDropdown);
+dropdownContainer2.addEventListener('mouseleave', closeDropdown);
 </script>
   
 <input
