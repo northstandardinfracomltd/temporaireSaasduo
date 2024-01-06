@@ -1203,7 +1203,11 @@ margin-bottom: 40px !important;
 .input-fieldfix1 {
 display: none; 
 }
-                 
+     
+.dropdownInput2 {
+display: none; 
+}
+  
 .cancellink {
 font-size: 22px !important;
 font-family: "saasduoPAR" !important;
@@ -1737,6 +1741,13 @@ border-radius: 0px;
       background-color: #f9f9f9;
     }
   
+  #dropdownContainer2 {
+    display: none;
+}
+
+#inputFieldFix1 {
+    display: none;
+}
 
 </style>
 </head>
@@ -1976,34 +1987,61 @@ maxlength="30"
   
   
   
-  <script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
-var dropdownInput = document.getElementById('dropdownInput');
-var inputFieldFix1 = document.getElementById('inputFieldFix1');
-var dropdownListItems = document.querySelectorAll('.dropdown-list-item');
-dropdownInput.addEventListener('input', function () {
-updateInputFieldVisibility();
-});
-dropdownListItems.forEach(function (item) {
-item.addEventListener('click', function () {
-dropdownListItems.forEach(function (item) {
-item.classList.remove('active');
-});
-item.classList.add('active');
-updateInputFieldVisibility();
-});
-});
-function updateInputFieldVisibility() {
-var inputValue = dropdownInput.value.trim();
-var selectedDropdownItem = document.querySelector('.dropdown-list-item.active');
-if (inputValue.length >= 3 || selectedDropdownItem) {
-inputFieldFix1.style.display = 'block';
-} else {
-inputFieldFix1.style.display = 'none';
-}
-}
+    var dropdownInput = document.getElementById('dropdownInput');
+    var dropdownInput2 = document.getElementById('dropdownInput2'); // Ajout du champ 2
+    var inputFieldFix1 = document.getElementById('inputFieldFix1'); // Ajout du champ 3
+
+    var dropdownListItems = document.querySelectorAll('.dropdown-list-item');
+    dropdownInput.addEventListener('input', function () {
+        updateInputFieldVisibility();
+    });
+
+    dropdownInput2.addEventListener('input', function () {
+        updateInputFieldVisibility();
+    });
+
+    inputFieldFix1.addEventListener('input', function () {
+        updateInputFieldVisibility();
+    });
+
+    dropdownListItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            dropdownListItems.forEach(function (item) {
+                item.classList.remove('active');
+            });
+            item.classList.add('active');
+            updateInputFieldVisibility();
+        });
+    });
+
+    function updateInputFieldVisibility() {
+        var inputValue1 = dropdownInput.value.trim();
+        var inputValue2 = dropdownInput2.value.trim(); // Ajout du champ 2
+        var inputValue3 = inputFieldFix1.value.trim(); // Ajout du champ 3
+        var selectedDropdownItem = document.querySelector('.dropdown-list-item.active');
+
+        if ((inputValue1.length >= 3 || selectedDropdownItem) && inputValue2.length >= 3) {
+            dropdownInput.style.display = 'block';
+            dropdownInput2.style.display = 'block'; // Afficher le champ 2
+            inputFieldFix1.style.display = 'block'; // Afficher le champ 3
+        } else {
+            dropdownInput.style.display = 'none';
+            dropdownInput2.style.display = 'none'; // Masquer le champ 2
+            inputFieldFix1.style.display = 'none'; // Masquer le champ 3
+        }
+    }
 });
 </script>
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
