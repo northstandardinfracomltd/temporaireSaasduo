@@ -1875,13 +1875,13 @@ class="saasduoimg lazyload"
 
   
 <div class="dropdown-container" id="dropdownContainer">
-<input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput" placeholder="Enter a SaaS usage type">
+<input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput" placeholder="SaaS usage category">
 <ul class="dropdown-list lazyload" id="colorList">
 <li class="dropdown-list-item lazyload" data-value="Blue">
-Maintenance System
+Industry-specific software
 </li>
 <li class="dropdown-list-item lazyload" data-value="Green">
-Booking Operations
+Neo 
 </li>
 <li class="dropdown-list-item lazyload" data-value="Yellow">
 Customer Platform
@@ -1898,17 +1898,22 @@ Internal
       // Sélection de l'élément dropdown-container
       var dropdownContainer = document.querySelector('.dropdown-container');
 
-      // Ajout d'un écouteur d'événements sur le champ dropdownInput
-      dropdownInput.addEventListener('input', function () {
+      function updateDropdownContainerStyle() {
         // Vérifier la longueur du texte dans dropdownInput
         if (dropdownInput.value.length >= 3) {
           // Appliquer le CSS à dropdown-container si la condition est remplie
-          dropdownContainer.style.marginTop = '0%';
+          dropdownContainer.style.marginTop = '7%';
         } else {
           // Réinitialiser le style si la condition n'est pas remplie
-          dropdownContainer.style.marginTop = '';
+          dropdownContainer.style.marginTop = '7%';
         }
-      });
+      }
+
+      // Ajout d'un écouteur d'événements sur le champ dropdownInput pour la saisie de texte
+      dropdownInput.addEventListener('input', updateDropdownContainerStyle);
+
+      // Ajout d'un écouteur d'événements sur le champ dropdownInput pour le changement de valeur
+      dropdownInput.addEventListener('change', updateDropdownContainerStyle);
 
       // Sélection de l'élément dropdown-list
       var dropdownList = document.getElementById('colorList');
@@ -1916,7 +1921,7 @@ Internal
       // Ajout d'un écouteur d'événements sur la liste déroulante elle-même
       dropdownList.addEventListener('click', function () {
         // Appliquer le CSS à dropdown-container lorsque la liste déroulante est cliquée
-        dropdownContainer.style.marginTop = '0%';
+        dropdownContainer.style.marginTop = '7%';
       });
     });
   </script>
@@ -1953,7 +1958,7 @@ dropdownContainer.addEventListener('mouseleave', closeDropdown);
   
   
 <div class="dropdown-container ninjamass" id="dropdownContainer2">
-<input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput2" placeholder="Default SaaS Language">
+<input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput2" placeholder="SaaS default language">
 <ul class="dropdown-list lazyload" id="colorList2">
 <li class="dropdown-list-item lazyload" data-value="Blue">
 English
