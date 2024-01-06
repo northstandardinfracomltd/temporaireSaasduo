@@ -238,6 +238,12 @@ margin-right: auto;
 margin-top: 20%;
 }
   
+  
+  
+.tsa {
+margin-top: 0% !important;
+}
+  
 *:focus {
 outline: none !important;
 }
@@ -1906,20 +1912,26 @@ dropdownContainer.addEventListener('mouseleave', closeDropdown);
 </script>
   
   
-<div class="dropdown-container2" id="dropdownContainer2">
+<div class="dropdown-container tsa" id="dropdownContainer2">
 <input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput2" placeholder="Default SaaS Language">
 <ul class="dropdown-list lazyload" id="colorList2">
 <li class="dropdown-list-item lazyload" data-value="Blue">
-Maintenance System<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Blue">
-</li>
-<li class="dropdown-list-item lazyload" data-value="Green">
-Booking Operations<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Green">
+English
 </li>
 <li class="dropdown-list-item lazyload" data-value="Yellow">
-Customer Platform<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Yellow">
+Français
 </li>
-<li class="dropdown-list-item lastly lazyload" data-value="Brown">
-Internal<img src="https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/12.svg?v=1704200581043" alt="Brown">
+<li class="dropdown-list-item lazyload" data-value="Brown">
+Portugais
+</li>
+  <li class="dropdown-list-item lazyload" data-value="Brown">
+Allemand
+</li>
+    <li class="dropdown-list-item lazyload" data-value="Brown">
+Spanish
+</li>
+      <li class="dropdown-list-item lastly lazyload" data-value="Brown">
+Polonais
 </li>
 </ul>
 </div>
@@ -1961,7 +1973,10 @@ placeholder="Name your SaaS"
 id="inputFieldFix1"
 maxlength="30" 
 />
-<script>
+  
+  
+  
+  <script>
 document.addEventListener('DOMContentLoaded', function () {
 var dropdownInput = document.getElementById('dropdownInput');
 var inputFieldFix1 = document.getElementById('inputFieldFix1');
@@ -1989,6 +2004,11 @@ inputFieldFix1.style.display = 'none';
 }
 });
 </script>
+  
+  
+  
+  
+
 <div class="radio-container lazyload">
 <label for="termsRadio" class="custom-radio">
 <input type="radio" id="termsRadio" name="termsRadio" />
