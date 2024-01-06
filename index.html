@@ -235,7 +235,7 @@ width: 100%;
 text-align: center;
 margin-left: auto;
 margin-right: auto;
-margin-top: 10%;
+margin-top: 25%;
 }
   
   .ninjamass {
@@ -1891,7 +1891,35 @@ Internal
 </li>
 </ul>
 </div>
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Sélection de l'élément dropdownInput
+      var dropdownInput = document.getElementById('dropdownInput');
+      // Sélection de l'élément dropdown-container
+      var dropdownContainer = document.querySelector('.dropdown-container');
+
+      // Ajout d'un écouteur d'événements sur le champ dropdownInput
+      dropdownInput.addEventListener('input', function () {
+        // Vérifier la longueur du texte dans dropdownInput
+        if (dropdownInput.value.length >= 3) {
+          // Appliquer le CSS à dropdown-container si la condition est remplie
+          dropdownContainer.style.marginTop = '0%';
+        } else {
+          // Réinitialiser le style si la condition n'est pas remplie
+          dropdownContainer.style.marginTop = '';
+        }
+      });
+
+      // Sélection de l'élément dropdown-list
+      var dropdownList = document.getElementById('colorList');
+
+      // Ajout d'un écouteur d'événements sur la liste déroulante elle-même
+      dropdownList.addEventListener('click', function () {
+        // Appliquer le CSS à dropdown-container lorsque la liste déroulante est cliquée
+        dropdownContainer.style.marginTop = '0%';
+      });
+    });
+  </script>
   
   <script>
 const dropdownInput = document.getElementById('dropdownInput');
