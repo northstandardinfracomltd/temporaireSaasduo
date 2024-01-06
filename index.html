@@ -1950,59 +1950,17 @@ dropdownContainer.addEventListener('mouseleave', closeDropdown);
   
   
 <div class="dropdown-container ninjamass" id="dropdownContainer2">
-<input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput2" placeholder="SaaS default language">
-<ul class="dropdown-list lazyload" id="colorList2">
-<li class="dropdown-list-item lazyload" data-value="English">
-English
-</li>
-<li class="dropdown-list-item lazyload" data-value="Français">
-Français
-</li>
-<li class="dropdown-list-item lazyload" data-value="Português">
-Português
-</li>
-  <li class="dropdown-list-item lazyload" data-value="Deutsch">
-Deutsch
-</li>
-    <li class="dropdown-list-item lazyload" data-value="Español">
-Español
-</li>
-</ul>
-  
-  
+  <input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput2" placeholder="SaaS default language">
+  <ul class="dropdown-list lazyload" id="colorList2">
+    <li class="dropdown-list-item lazyload" data-value="English" onclick="changeButtonText('Get started')">English</li>
+    <li class="dropdown-list-item lazyload" data-value="Français" onclick="changeButtonText('Poursuivre')">Français</li>
+    <li class="dropdown-list-item lazyload" data-value="Português" onclick="changeButtonText('Iniciar')">Português</li>
+    <li class="dropdown-list-item lazyload" data-value="Deutsch" onclick="changeButtonText('Loslegen')">Deutsch</li>
+    <li class="dropdown-list-item lastly lazyload" data-value="Español" onclick="changeButtonText('Empezar')">Español</li>
+  </ul>
 </div>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Récupérer les éléments du DOM
-    var dropdownInput = document.getElementById('dropdownInput2');
-    var button = document.querySelector('.red-buttonfix1');
 
-    // Ajouter un gestionnaire d'événements pour le changement dans le dropdown
-    dropdownInput.addEventListener('change', function() {
-      // Récupérer la valeur sélectionnée dans le dropdown
-      var selectedValue = dropdownInput.value;
-
-      // Modifier le texte du bouton en fonction de la valeur sélectionnée
-      button.textContent = {
-        'English': 'Get started',
-        'Français': 'Poursuivre',
-        'Português': 'Iniciar',
-        'Deutsch': 'Loslegen',
-        'Español': 'Empezar'
-      }[selectedValue] || 'Get started';
-    });
-
-    // Fonction de validation du formulaire
-    function validateForm() {
-      // Ajoutez votre logique de validation ici
-      alert('Form validated!');
-    }
-
-    // Ajouter un gestionnaire d'événements pour le clic sur le bouton
-    button.addEventListener('click', validateForm);
-  });
-</script>
 
   
 <script>
@@ -2115,9 +2073,22 @@ I have read
 </label>
 </div>
   
-<a href="https://9362i9273i0012i6401i7352i9362i9273i0012i6401i7352i0012.glitch.me/"><button class="red-buttonfix1 lazyload" onclick="validateForm()">Get started</button></a>
-
   
+  
+  
+<a href="https://9362i9273i0012i6401i7352i9362i9273i0012i6401i7352i0012.glitch.me/">
+  <button id="submitButton" class="red-buttonfix1 lazyload" onclick="validateForm()">Get started</button>
+</a>
+  <script>
+  function changeButtonText(text) {
+    document.getElementById('submitButton').innerText = text;
+  }
+
+  function validateForm() {
+    // Ajoutez ici votre logique pour valider le formulaire
+    // Cette fonction est appelée lorsque le bouton est cliqué
+  }
+</script>
 
   
   
