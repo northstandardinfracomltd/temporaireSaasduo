@@ -1841,7 +1841,7 @@ var icon = document.querySelector('.dropdown2-icon');
 if (!event.target.matches('.dropdown2-icon')) {
 if (dropdown.style.display === 'block') {
 dropdown.style.display = 'none';
-icon.style.color = '#000'; // Change the icon color when dropdown is closed
+icon.style.color = '#000'; //
 }
 }
 });
@@ -1850,10 +1850,10 @@ var dropdown = document.getElementById('myDropdown');
 var icon = document.querySelector('.dropdown2-icon');
 if (dropdown.style.display === 'none' || dropdown.style.display === '') {
 dropdown.style.display = 'block';
-icon.style.color = '#00cc00'; // Change the icon color when dropdown is open
+icon.style.color = '#00cc00'; // C
 } else {
 dropdown.style.display = 'none';
-icon.style.color = '#000'; // Change the icon color when dropdown is closed
+icon.style.color = '#000'; // 
 }
 }
 </script>     
@@ -1877,56 +1877,48 @@ class="saasduoimg lazyload"
 <div class="dropdown-container" id="dropdownContainer">
 <input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput" placeholder="SaaS usage category">
 <ul class="dropdown-list lazyload" id="colorList">
-<li class="dropdown-list-item lazyload" data-value="Blue">
-Industry-specific software
+<li class="dropdown-list-item lazyload" data-value="Specific software">
+Specific software
 </li>
-<li class="dropdown-list-item lazyload" data-value="Green">
-Neo 
+<li class="dropdown-list-item lazyload" data-value="Online neo platform">
+Online neo platform
 </li>
-<li class="dropdown-list-item lazyload" data-value="Yellow">
-Customer Platform
-</li>
-<li class="dropdown-list-item lastly lazyload" data-value="Brown">
-Internal
+<li class="dropdown-list-item lastly lazyload" data-value="CX Support system">
+CX Support system
 </li>
 </ul>
 </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Sélection de l'élément dropdownInput
-      var dropdownInput = document.getElementById('dropdownInput');
-      // Sélection de l'élément dropdown-container
-      var dropdownContainer = document.querySelector('.dropdown-container');
-
-      function updateDropdownContainerStyle() {
-        // Vérifier la longueur du texte dans dropdownInput
-        if (dropdownInput.value.length >= 3) {
-          // Appliquer le CSS à dropdown-container si la condition est remplie
-          dropdownContainer.style.marginTop = '7%';
-        } else {
-          // Réinitialiser le style si la condition n'est pas remplie
-          dropdownContainer.style.marginTop = '7%';
-        }
-      }
-
-      // Ajout d'un écouteur d'événements sur le champ dropdownInput pour la saisie de texte
-      dropdownInput.addEventListener('input', updateDropdownContainerStyle);
-
-      // Ajout d'un écouteur d'événements sur le champ dropdownInput pour le changement de valeur
-      dropdownInput.addEventListener('change', updateDropdownContainerStyle);
-
-      // Sélection de l'élément dropdown-list
-      var dropdownList = document.getElementById('colorList');
-
-      // Ajout d'un écouteur d'événements sur la liste déroulante elle-même
-      dropdownList.addEventListener('click', function () {
-        // Appliquer le CSS à dropdown-container lorsque la liste déroulante est cliquée
-        dropdownContainer.style.marginTop = '7%';
-      });
-    });
-  </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+// 
+var dropdownInput = document.getElementById('dropdownInput');
+// 
+var dropdownContainer = document.querySelector('.dropdown-container');
+function updateDropdownContainerStyle() {
+// 
+if (dropdownInput.value.length >= 3) {
+// 
+dropdownContainer.style.marginTop = '7%';
+} else {
+// 
+dropdownContainer.style.marginTop = '7%';
+}
+}
+// 
+dropdownInput.addEventListener('input', updateDropdownContainerStyle);
+// 
+dropdownInput.addEventListener('change', updateDropdownContainerStyle);
+// 
+var dropdownList = document.getElementById('colorList');
+//
+dropdownList.addEventListener('click', function () {
+// 
+dropdownContainer.style.marginTop = '7%';
+});
+});
+</script>
   
-  <script>
+<script>
 const dropdownInput = document.getElementById('dropdownInput');
 const colorList = document.getElementById('colorList');
 const dropdownContainer = document.getElementById('dropdownContainer');
@@ -1960,23 +1952,20 @@ dropdownContainer.addEventListener('mouseleave', closeDropdown);
 <div class="dropdown-container ninjamass" id="dropdownContainer2">
 <input maxlength="35" type="text" class="dropdown-input lazyload" id="dropdownInput2" placeholder="SaaS default language">
 <ul class="dropdown-list lazyload" id="colorList2">
-<li class="dropdown-list-item lazyload" data-value="Blue">
+<li class="dropdown-list-item lazyload" data-value="English">
 English
 </li>
-<li class="dropdown-list-item lazyload" data-value="Yellow">
+<li class="dropdown-list-item lazyload" data-value="Français">
 Français
 </li>
-<li class="dropdown-list-item lazyload" data-value="Brown">
-Portugais
+<li class="dropdown-list-item lazyload" data-value="Português">
+Português
 </li>
-  <li class="dropdown-list-item lazyload" data-value="Brown">
-Allemand
+  <li class="dropdown-list-item lazyload" data-value="Deutsch">
+Deutsch
 </li>
-    <li class="dropdown-list-item lazyload" data-value="Brown">
-Spanish
-</li>
-      <li class="dropdown-list-item lastly lazyload" data-value="Brown">
-Polonais
+    <li class="dropdown-list-item lazyload" data-value="Español">
+Español
 </li>
 </ul>
 </div>
