@@ -1741,13 +1741,14 @@ border-radius: 0px;
       background-color: #f9f9f9;
     }
   
-  #dropdownContainer2 {
+#dropdownContainer2 {
     display: none;
 }
 
 #inputFieldFix1 {
     display: none;
 }
+
 
 </style>
 </head>
@@ -1985,24 +1986,19 @@ id="inputFieldFix1"
 maxlength="30" 
 />
   
-  
-  
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     var dropdownInput = document.getElementById('dropdownInput');
-    var dropdownInput2 = document.getElementById('dropdownInput2'); // Ajout du champ 2
-    var inputFieldFix1 = document.getElementById('inputFieldFix1'); // Ajout du champ 3
+    var dropdownContainer2 = document.getElementById('dropdownContainer2');
+    var inputFieldFix1 = document.getElementById('inputFieldFix1');
 
     var dropdownListItems = document.querySelectorAll('.dropdown-list-item');
+
     dropdownInput.addEventListener('input', function () {
         updateInputFieldVisibility();
     });
 
-    dropdownInput2.addEventListener('input', function () {
-        updateInputFieldVisibility();
-    });
-
-    inputFieldFix1.addEventListener('input', function () {
+    dropdownInput.addEventListener('change', function () {
         updateInputFieldVisibility();
     });
 
@@ -2018,26 +2014,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateInputFieldVisibility() {
         var inputValue1 = dropdownInput.value.trim();
-        var inputValue2 = dropdownInput2.value.trim(); // Ajout du champ 2
-        var inputValue3 = inputFieldFix1.value.trim(); // Ajout du champ 3
         var selectedDropdownItem = document.querySelector('.dropdown-list-item.active');
 
-        if ((inputValue1.length >= 3 || selectedDropdownItem) && inputValue2.length >= 3) {
-            dropdownInput.style.display = 'block';
-            dropdownInput2.style.display = 'block'; // Afficher le champ 2
-            inputFieldFix1.style.display = 'block'; // Afficher le champ 3
+        if (inputValue1.length >= 3 || selectedDropdownItem) {
+            dropdownContainer2.style.display = 'block';
+            inputFieldFix1.style.display = 'block';
         } else {
-            dropdownInput.style.display = 'none';
-            dropdownInput2.style.display = 'none'; // Masquer le champ 2
-            inputFieldFix1.style.display = 'none'; // Masquer le champ 3
+            dropdownContainer2.style.display = 'none';
+            inputFieldFix1.style.display = 'none';
         }
     }
+
+    // Initialisation pour masquer la div du champ 2 et le champ 3
+    dropdownContainer2.style.display = 'none';
+    inputFieldFix1.style.display = 'none';
 });
 </script>
-  
-  
-  
-  
+
   
   
   
