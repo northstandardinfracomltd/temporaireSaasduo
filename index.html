@@ -607,8 +607,8 @@ padding-right: 10px;
 margin-left: auto;
 margin-right: auto;
 text-align: center !important;
-padding-top: 30px;
-margin-bottom: 10px;
+padding-top: 10px;
+margin-bottom: 0px;
 cursor: default;
 }
       
@@ -679,28 +679,38 @@ margin-left: auto;
 margin-right: auto;
 text-align: center;
 }
-   
-.yellowdiv {
+ 
+  
+  
+  .yellowdivparent {
 background-color: #ffd000;
+}
+  
+.yellowdiv {
 padding: 0px;
 text-align: center;
 margin-top: 150px;
 margin-bottom: 150px;
-padding-bottom: 110px;
+padding-bottom: 30px;
 padding-top: 30px;
-box-shadow: 20px -1px 2.74416px rgb(185 185 185 / 3%), -2px 11px 5.48831px rgb(188 188 188 / 4%), 0px -18px 10.9766px rgb(189 189 189 / 5%), 0px 14px 20.5812px rgb(203 203 203 / 6%), 0px 12px 41.1623px rgb(163 163 163 / 7%), -20px 0px 89.1851px rgb(255 255 255 / 9%);
-border-radius: 120px;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 25px;
+max-width: 1200px;
+width: 95%;
+margin-left: auto;
+margin-right: auto;
+
 }
   
   
   .yellowdivsub {
-/*ded*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
-  
-  
+
   
     
   @media (min-width: 100px) and (max-width: 819px)
@@ -716,7 +726,7 @@ margin-bottom: 10px;
 }
 
 .yellowdiv img {
-max-width: 100%;
+max-width: 96%;
 height: auto;
 margin-bottom: 10px;
 }
@@ -2513,7 +2523,8 @@ I have read
   
   
   
-  
+  <div class="yellowdivparent">
+
 <div class="yellowdiv">
 <div class="yellowdivsub">
 <p class="yellowdivtxt1">Easy as ABC<br>For superb systems</p>
@@ -2584,7 +2595,7 @@ question.style.color = '#000';
 });
 </script>
   
-  </div></div>
+  </div></div></div>
 </div>
       
   
