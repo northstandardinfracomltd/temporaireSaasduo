@@ -34,12 +34,23 @@ color: #1b1b20;
 }
 
 .parent-div {
-  background: rgba(40, 4, 74, 0.2), url('https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/SaaSduo29382398238Logo293823293823923.svg?v=1704727098398');
-  background-size: cover; /* Assurez-vous que l'image de fond couvre complètement l'élément */
-  background-repeat: no-repeat; /* Évitez la répétition de l'image de fond */
-  padding: 0px;
+  position: relative;
+  background: #28044A;
+  padding: 0;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.parent-div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://cdn.glitch.global/c0151ab8-f45e-43cf-ba43-a2348a9a865e/themelogo9982392832983923032238929323.svg?v=1704729008733');
+  background-size: cover;
+  opacity: 0.1;
 }
       
       
@@ -82,11 +93,13 @@ display: block;
   
 .col-left {
 text-align: left;
+      z-index: 1000;
 }
 
 .col-right {
 text-align: center;
 padding-top: 25px;
+      z-index: 1000;
 }
       
 @font-face {
